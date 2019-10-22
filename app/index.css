@@ -1,4 +1,11 @@
 .app {
-    background-color: tomato;
-    margin-left: 50px;
-}   
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+} 
+
+.lookuperror {
+    border: 5px solid red;
+}

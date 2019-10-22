@@ -1,19 +1,18 @@
 import {put, takeLatest, all} from 'redux-saga/effects';
 
 
-function* postLookupSaga(data) {
-    console.log('----> in root saga');
-    const res = yield fetch('https://reqres.in/api/users', {
+function* postLookupSaga(action) {
+    const resp = yield fetch('https://api.myjson.com/bins/yg6gv', {
                                 method: 'POST',
                                 headers: {
                                     'Accept': 'application/json',
                                     'Content-Type': 'application/json'
                                 },
-                                body: JSON.stringify()
+                                body: JSON.stringify(action.data)
                             })
                             .then(data => data.json())
-    console.log('rootsaga', res);
-    yield put({type: 'RECEIVE_LOOKUP', res});
+    //console.log('rootsaga', resp);
+    yield put({type: 'RECEIVE_LOOKUP', resp});
 }
 
 function* actionWatcher() {

@@ -3,10 +3,10 @@ export const postLookup = (data) => ({
     data
 })
 
-// export const receiveLookup = (data) => ({
-//     type: 'RECEIVE_LOOKUP',
-//     data
-// })
+export const postSave = (data) => ({
+    type: 'POST_SAVE',
+    data
+})
 
 export const errorLookup = (error) => ({
     type: 'ERROR_LOOKUP',

@@ -1,30 +1,45 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {saveNetwork} from '../actions/action';
+import {postLookup, postSave} from '../actions/action';
+import {fakeApi} from '../api';
+import AddPayble from './add-payble';
 
 class AddNetwork extends React.Component {
-    handleCancel = () => {
-        this.props.onCancel(false);
+    state = {
+        addText: ''
     }
+    handleSave = (e) => {
+        e.preventDefault();
+        console.dir(e.target);
+    }
+
+    handleChange = (e) => {
+        this.setState({addText: e.target.value})
+    }
+
     render() {
-        console.log('props--->', this.props);
-        return (
+            return (
                 <div>
-                    <p>{this.props.data.name}</p>
-                    <p>{this.props.data.job}</p>
-                    <p>{this.props.data.id}</p>
-                    <p>{this.props.data.createdAt}</p>
                     <form onSubmit={this.handleSave}>
-                        <label>Age:&nbsp;</label>
-                        <input type="number" />
-                        <label>Gender:&nbsp;</label>
-                        <input type="text" />
+                        <label htmlFor="add">Text</label>
+                        <textarea 
+                            id="add" 
+                            name="add" 
+                            rows={3} 
+                            cols={10} 
+                            wrap="hard"
+                            value={this.state.addText}
+                            onChange={this.handleChange}>
+                        </textarea>
+                        <input type="hidden"></input>
                         <button type="submit">save</button>
-                        <button onClick={this.handleCancel}>cancel</button>
                     </form>
+                    <p>{this.state.addText}</p>
                 </div>
+                
         );
+
     }
 }
 
@@ -33,7 +48,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => {
-    return bindActionCreators({saveNetwork}, dispatch)
+    return bindActionCreators({postLookup, postSave}, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddNetwork)

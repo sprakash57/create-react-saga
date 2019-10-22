@@ -5,12 +5,14 @@ const initState = {
 }
 
 const verifyReducer = (state = initState, action) => {
-    console.log('verifyReducer', action);
+    //console.log('verifyReducer', action);
     switch(action.type) {
         case 'POST_LOOKUP':
-            return {...state, user: action.data};
+            return {...state, user: action.resp};
         case 'RECEIVE_LOOKUP':
-            return {...state, user: action.data};
+            return {...state, user: action.resp};
+        case 'POST_SAVE':
+            return {...state, user: action.resp};
         default:
             return state;
     }

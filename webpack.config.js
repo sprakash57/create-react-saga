@@ -3,11 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: ['babel-polyfill', './app/index.js'],
-    resolve: {
-        alias: {
-            'react-dom': '@hot-loader/react-dom'
-        }
-    },
     module: {
         rules: [
             {test: /\.(js)$/, use: 'babel-loader'},
