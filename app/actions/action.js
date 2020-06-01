@@ -3,17 +3,7 @@ export const postLookup = (data) => ({
     data
 })
 
-export const postSave = (data) => ({
-    type: 'POST_SAVE',
+export const getLookup = (data) => ({
+    type: 'GET_LOOKUP',
     data
 })
-
-export const errorLookup = (error) => ({
-    type: 'ERROR_LOOKUP',
-    error
-})
-
-export const saveNetwork = (data) => {
-    type: 'SAVE_NETWORK',
-    data
-}

@@ -1,22 +1,16 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 
 const initState = {
-    user: {}
+    users: { data: [] }
 }
 
 const verifyReducer = (state = initState, action) => {
-    //console.log('verifyReducer', action);
-    switch(action.type) {
-        case 'POST_LOOKUP':
-            return {...state, user: action.resp};
-        case 'RECEIVE_LOOKUP':
-            return {...state, user: action.resp};
-        case 'POST_SAVE':
-            return {...state, user: action.resp};
+    switch (action.type) {
+        case 'GET_LOOKUP':
+            return { ...state, users: action.response };
         default:
             return state;
     }
-    
 }
 
 const reducer = combineReducers({

@@ -1,48 +1,57 @@
-import React from 'react';
-import {hot} from 'react-hot-loader';
-import {Form, Input} from 'reactstrap';
-import '../app/index.css';
-import AccountLookup from './components/account-lookup';
-import AddNetwork from './components/add-network';
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { postLookup } from './actions/action';
+import './index.css';
 
-export class App extends React.Component {
-    state = {
-        name: '',
-        job: '',
-        insert: true
+const App = ({ users, postLookup }) => {
+    const [loading, setLoading] = useState(false);
+    const fetchUsers = () => {
+        postLookup();
+        setLoading(true);
     }
-    handleSubmit = e => {
-        let obj = {}
-        e.preventDefault();
-        let form = document.forms.namedItem('fileinfo');
-        let oData = new FormData(form);
-        for (let [key, value] of oData.entries()) {
-            obj[key] = value
+
+    const renderUsers = () => {
+        if (users.data.length !== 0) {
+            return users.data.map((user, i) => (
+                <div className="row mt-5" key={i}>
+                    <div className="col">
+                        <p>Name: {user.first_name} {user.last_name}</p>
+                        <p>Email: {user.email}</p>
+                        <hr />
+                    </div>
+                </div>
+            ))
         }
-        console.log(obj);
+        return null;
     }
 
-    handleChange = (e) => {
-        if (e.target.value.length === 2 && this.state.insert) {
-            let item = e.target.value + ':';
-            this.setState({[e.target.name]: item, insert: false})
-        } else
-            this.setState({[e.target.name]: e.target.value, insert: true})
-    }
+    useEffect(() => {
+        setLoading(false);
+    }, [users]);
 
-    render() {
-        return (
-            <div className='app'>
-                <Form onSubmit={this.handleSubmit} name="fileinfo">
-                    <label>Name:&nbsp;</label>
-                    <Input type='text' value={this.state.name} name='name' onChange={this.handleChange}/>
-                    <label>Job:&nbsp;</label>
-                    <Input type='text' name='job' value={this.state.job} onChange={this.handleChange}/>
-                    <button type="submit">Verify</button>
-                </Form>
-            </div>
-        );
-    }
+    return (
+        <div className="container mt-5 text-center">
+            <h3>Click Fetch to list all users</h3>
+            <button className="btn btn-primary mt-2" onClick={fetchUsers}>Fetch</button>
+            {loading
+                ? <p className='mt-5'>Loading...</p>
+                : renderUsers()
+            }
+        </div>
+    )
 }
 
-export default App;
+App.propTypes = {
+    users: PropTypes.object.isRequired,
+    postLookup: PropTypes.func.isRequired,
+}
+
+const mapStateToProps = state => ({
+    users: state.verifyReducer.users
+})
+
+const mapDispatchToProps = dispatch => bindActionCreators({ postLookup }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
