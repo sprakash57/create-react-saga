@@ -2,22 +2,23 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { postLookup } from './actions/action';
+import { fetchUsers } from './actions';
 import './index.css';
 
-const App = ({ users, postLookup }) => {
+const App = ({ users, fetchUsers }) => {
+
     const [loading, setLoading] = useState(false);
-    const fetchUsers = () => {
-        postLookup();
+    const loadUsers = () => {
+        fetchUsers();
         setLoading(true);
     }
 
     const renderUsers = () => {
-        if (users.data.length !== 0) {
-            return users.data.map((user, i) => (
-                <div className="row mt-5" key={i}>
+        if (users.length !== 0) {
+            return users.map(user => (
+                <div className="row mt-5" key={user.id}>
                     <div className="col">
-                        <p>Name: {user.first_name} {user.last_name}</p>
+                        <p>Name: {user.name}</p>
                         <p>Email: {user.email}</p>
                         <hr />
                     </div>
@@ -34,7 +35,7 @@ const App = ({ users, postLookup }) => {
     return (
         <div className="container mt-5 text-center">
             <h3>Click Fetch to list all users</h3>
-            <button className="btn btn-primary mt-2" onClick={fetchUsers}>Fetch</button>
+            <button className="btn btn-primary mt-2" onClick={loadUsers}>Fetch</button>
             {loading
                 ? <p className='mt-5'>Loading...</p>
                 : renderUsers()
@@ -44,14 +45,14 @@ const App = ({ users, postLookup }) => {
 }
 
 App.propTypes = {
-    users: PropTypes.object.isRequired,
-    postLookup: PropTypes.func.isRequired,
+    users: PropTypes.array.isRequired,
+    fetchUsers: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
-    users: state.verifyReducer.users
+    users: state.userReducer.users
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({ postLookup }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ fetchUsers }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
