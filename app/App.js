@@ -3,44 +3,23 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchUsers } from './actions';
-import './index.css';
+import User from './components/User';
 
 const App = ({ users, fetchUsers }) => {
-
-    const [loading, setLoading] = useState(false);
     const loadUsers = () => {
         fetchUsers();
-        setLoading(true);
     }
-
-    const renderUsers = () => {
-        if (users.length !== 0) {
-            return users.map(user => (
-                <div className="row mt-5" key={user.id}>
-                    <div className="col">
-                        <p>Name: {user.name}</p>
-                        <p>Email: {user.email}</p>
-                        <hr />
-                    </div>
-                </div>
-            ))
-        }
-        return null;
-    }
-
-    useEffect(() => {
-        setLoading(false);
-    }, [users]);
-
     return (
-        <div className="container mt-5 text-center">
-            <h3>Click Fetch to list all users</h3>
-            <button className="btn btn-primary mt-2" onClick={loadUsers}>Fetch</button>
-            {loading
-                ? <p className='mt-5'>Loading...</p>
-                : renderUsers()
-            }
-        </div>
+        <main className="container">
+            <h1>Click Fetch to get All the users</h1>
+            <button onClick={loadUsers}>Fetch</button>
+            <section className="users">
+                {users.length
+                    ? users.map(user => <User key={user.id} user={user} />)
+                    : null
+                }
+            </section>
+        </main>
     )
 }
 

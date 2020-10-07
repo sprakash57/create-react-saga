@@ -5,9 +5,12 @@ module.exports = {
     entry: ['babel-polyfill', './app/index.js'],
     module: {
         rules: [
-            {test: /\.(js)$/, use: 'babel-loader'},
-            {test: /\.css$/, use: ['style-loader', 'css-loader']}
+            { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] }
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

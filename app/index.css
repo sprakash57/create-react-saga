@@ -1,3 +1,19 @@
 body{
     font-family: monospace;
 }
+.user{
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.4);
+}
+.users{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.container{
+    text-align: center;
+}
