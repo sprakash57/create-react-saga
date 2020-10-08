@@ -1,6 +1,6 @@
 import { put, takeLatest, all, call } from 'redux-saga/effects';
-import { fetchUsersResolved } from '../actions';
-import { ERROR, FETCH_USERS } from '../constants';
+import { fetchUsersRejected, fetchUsersResolved } from '../actions';
+import { FETCH_USERS, ERROR } from '../constants';
 import fetchData from '../libs/fetchData';
 
 function* onLoadUsers() {
@@ -8,7 +8,7 @@ function* onLoadUsers() {
         const response = yield call(fetchData);
         yield put(fetchUsersResolved(response));
     } catch (error) {
-        yield put(fetchUsersResolved(ERROR));
+        yield put(fetchUsersRejected(ERROR));
     }
 }
 

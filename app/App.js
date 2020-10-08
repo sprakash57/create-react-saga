@@ -1,35 +1,44 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchUsers } from './actions';
 import User from './components/User';
+import Alert from './components/Alert';
 
-const App = ({ users, fetchUsers }) => {
+const App = ({ state, fetchUsers }) => {
+    const { users, loading, message } = state;
+
     const loadUsers = () => {
         fetchUsers();
     }
+
+    const renderUser = () => {
+        if (message) return <Alert message={message} />
+        return <section className="users">
+            {users.length
+                ? users.map(user => <User key={user.id} user={user} />)
+                : null
+            }
+        </section>
+    }
+
     return (
-        <main className="container">
-            <h1>Click Fetch to get All the users</h1>
+        <main className="t-center">
+            <h1>Click Fetch & let Saga does the rest.</h1>
             <button onClick={loadUsers}>Fetch</button>
-            <section className="users">
-                {users.length
-                    ? users.map(user => <User key={user.id} user={user} />)
-                    : null
-                }
-            </section>
+            {loading ? <Alert message="Loading..." /> : renderUser()}
         </main>
     )
 }
 
 App.propTypes = {
-    users: PropTypes.array.isRequired,
+    state: PropTypes.object.isRequired,
     fetchUsers: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
-    users: state.userReducer.users
+    state: state.userReducer
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({ fetchUsers }, dispatch);

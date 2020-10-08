@@ -14,6 +14,7 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
 }
-.container{
+.t-center{
+    margin-top: 1rem;
     text-align: center;
 }

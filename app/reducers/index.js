@@ -1,16 +1,20 @@
 import { combineReducers } from 'redux';
-import { FETCH_USERS, FETCH_USERS_RESOLVED } from '../constants';
+import { FETCH_USERS, FETCH_USERS_RESOLVED, FETCH_USERS_REJECTED } from '../constants';
 
 const initState = {
-    users: []
+    users: [],
+    loading: false,
+    message: ""
 }
 
 const userReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'GET_LOOKUP':
-            return { ...state, users: action.response };
+        case FETCH_USERS:
+            return { ...state, loading: true, message: "" };
+        case FETCH_USERS_REJECTED:
+            return { ...state, loading: false, message: action.data }
         case FETCH_USERS_RESOLVED:
-            return { ...state, users: action.data };
+            return { ...state, users: action.data, loading: false, message: "" };
         default:
             return state;
     }
