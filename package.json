@@ -1,10 +1,11 @@
 {
-  "name": "react-wcra",
-  "version": "1.0.0",
+  "name": "webpack-react-saga",
+  "version": "0.0.1",
   "description": "Starter code for your next React Saga application",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "Sunny Prakash",
@@ -23,12 +24,17 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
+    "file-loader": "^6.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.14.1",
+    "react-svg-loader": "^3.0.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   }
 }

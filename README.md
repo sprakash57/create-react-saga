@@ -1,14 +1,19 @@
 # react-wcra
 
-Its a boilerplate react + redux-saga setup to quickly get you up and running. This has been built from the scratch on top of webpack and babel configs. NO Create-react-app has been used. So if you are looking for some redux-saga starter code then you are at the right place. 
+Are you looking for a React codebase which has Redux-Saga and Scss setup from the scratch? Not sure how to setup Webpack and babel? Want to stay away from Create-React-App? Well you come to the right place. Webpack-React-Saga is is one stop soluion for 
+- Rapid POC builder around React hooks and Redux-Saga.
+- Boilerplate code for your next big assignment.
+- if you want to learn webpack and babel by yourself without any hand-holding.
+
+Webpack-React-Saga is react-scripts free boilerplate codebase. Just clone the repo and start building your app.
 
 ### Dependencies
 
-- **React 16.13+**
-- **Redux 4.0.1**
-- **Redux-saga 1.0.4**
-- **Bootstrap 4.3**
-- **JS-Cookie 2.2**
+- **React**
+- **Redux-Saga**
+- **Sass**
+- **Webpack**
+- **Babel**
 
 ### Usage
 
@@ -17,4 +22,5 @@ Its a boilerplate react + redux-saga setup to quickly get you up and running. Th
     $ npm i and then npm start
 
 ### WIP stuff
-webpack support for development and production will be added soon.
+- webpack support for development and production will be added soon.
+- Unit test cases setup
