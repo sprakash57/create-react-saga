@@ -8,9 +8,8 @@ module.exports = {
         rules: [
             { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
             { test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-            { test: /\.svg$/, use: ['babel-loader', { loader: 'react-svg-loader', options: { jsx: true } }] },
-            { test: /\.(png|jpe?g|gif)$/, use: ['babel-loader', { loader: 'file-loader?name=app/assets/[name].[ext]' }] },
-            { test: /\.(eot|ttf|wof|wof2)$/, loader: 'file-loader?name=app/assets/fonts/[name].[ext]' }
+            { test: /\.(png|jpe?g|gif|svg|ico)$/, loader: 'file-loader?name=assets/[name].[ext]' },
+            { test: /\.(eot|ttf|wof|wof2)$/, loader: 'file-loader?name=/assets/fonts/[name].[ext]' }
         ]
     },
     resolve: {
@@ -24,7 +23,8 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './app/index.html',
-            filename: './index.html'
+            filename: './index.html',
+            favicon: './app/assets/favicon.ico'
         })
     ]
 };
