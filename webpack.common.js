@@ -23,8 +23,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './app/index.html',
-            filename: './index.html',
-            favicon: './app/assets/favicon.ico'
+            favicon: './assets/favicon.ico'
         })
     ]
 };

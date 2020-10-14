@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { fetchUsers } from './actions';
 import User from './components/User';
 import Alert from './components/Alert';
-import logo from './assets/logo.svg';
+import logo from '../assets/logo.svg';
 
 const App = ({ state, fetchUsers }) => {
     const { users, loading, message } = state;
