@@ -5,7 +5,7 @@ Are you looking for a React codebase which has Redux-Saga and Scss setup from th
 - Boilerplate code for your next big assignment.
 - Learn webpack and babel by using your own recipes and experiments.
 
-Webpack-React-Saga is react-scripts free boilerplate codebase. Just clone the repo and start building your app.
+You can find the live demo over [here](https://master.d3knmnietsgia5.amplifyapp.com)
 
 ## 💻 Technology Stack
 
@@ -18,15 +18,15 @@ Webpack-React-Saga is react-scripts free boilerplate codebase. Just clone the re
 
 ## 🚀 Features
 - Lean and easy to understand webpack configurations for production and development environment.
-- Sass/Scss support. No more plain old css 😁.
+- Sass/Scss support. No more plain old CSS 😁.
 - Unit test case examples included (More will be added soon).
 - NO create-react-app used. You can configure your app as per your need.
 - Functional components and hooks 😍, no more old classes.
-- Proper implementaion of Redux-Saga.
-- Boilerplate is based on real world project done for one of my clients.
+- Proper implementation of Redux-Saga.
+- Boilerplate is based on a real-world project done for one of my clients.
 - Constant maintenance and package updates.
 - Optimized bundle size for production.
-- Redux devtool integraiton with trace enabled.
+- Redux devtool integration with trace enabled.
 
 ## How to use?
 

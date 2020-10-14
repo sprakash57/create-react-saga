@@ -1,6 +1,6 @@
 {
   "name": "webpack-react-saga",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Starter code for your next React Saga application",
   "main": "index.js",
   "scripts": {
