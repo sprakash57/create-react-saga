@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test suite App Component Should match snapshot 1`] = `
+<App
+  fetchUsers={[MockFunction]}
+  state={
+    Object {
+      "loading": false,
+      "message": "",
+      "users": Array [
+        Object {
+          "address": Object {
+            "city": "ipsum",
+            "street": "lorem",
+          },
+          "email": "johndoe@mail.com",
+          "id": 1,
+          "name": "john",
+          "phone": "777-777",
+        },
+      ],
+    }
+  }
+>
+  <main
+    className="t-center"
+  >
+    <img
+      alt="logo"
+      className="logo"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+    <h1>
+      Click Fetch & let Saga does the rest.
+    </h1>
+    <button
+      onClick={[Function]}
+    >
+      Fetch
+    </button>
+    <section
+      className="users"
+    >
+      <User
+        key="1"
+        user={
+          Object {
+            "address": Object {
+              "city": "ipsum",
+              "street": "lorem",
+            },
+            "email": "johndoe@mail.com",
+            "id": 1,
+            "name": "john",
+            "phone": "777-777",
+          }
+        }
+      >
+        <section
+          className="user"
+        >
+          <p>
+            Name: 
+            john
+          </p>
+          <p>
+            Email: 
+            johndoe@mail.com
+          </p>
+          <p>
+            Address: 
+            lorem
+            , 
+            ipsum
+          </p>
+          <p>
+            Phone: 
+            777-777
+          </p>
+        </section>
+      </User>
+    </section>
+  </main>
+</App>
+`;
