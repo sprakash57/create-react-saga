@@ -1,4 +1,4 @@
-# webpack-react-saga
+<h1 align="center">Webpack - React - Saga</h1>
 
 Are you looking for a React codebase which has Redux-Saga and Scss setup from the scratch? Not sure how to setup Webpack and babel? Want to stay away from Create-React-App? Well if you have these mind-boggling question then you come to the right place. Webpack-React-Saga is is one stop soluion for 
 - Rapidly build POC(Proof of Concepts) around React hooks and Redux-Saga with webpack.
