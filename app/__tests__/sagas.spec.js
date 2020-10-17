@@ -1,4 +1,3 @@
-import '@babel/polyfill';
 import { all } from 'redux-saga/effects';
 import rootSaga, { watchActions } from '../sagas';
 const generator = rootSaga();

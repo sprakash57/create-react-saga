@@ -35,21 +35,18 @@ You can find the live demo over [here](https://master.d3knmnietsgia5.amplifyapp.
     $ npm i 
     $ npm start
 
-## 🤝 Want to Contribute? Follow these steps:
+## 🤝 Want to Contribute? Follow these steps (Important!!):
 1. Fork this repo. - Click the fork symbol on rightmost top corner of your window.
 
 2. Clone the forked repo. - Click the green button saying "Code" with a download button.
 
-3. Visit https://github.com/sprakash57/webpack-react-saga/issues and comment your username. - Thereby I would be able to assign issues to you for contribution.
+3. Visit https://github.com/sprakash57/webpack-react-saga/issues, comment on the issue so that i can assign it to you.
 
-4. Solve and Test your application. - You can do this in your own system with preferred editor.
+4. Do a thorough testing, provide inline comments for complex logic.
 
-5. Create a Pull Request. - Follow this guide https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github to raise a PR.
+5. Write proper and meaningful commit messages. Provide information about any new packages included.
+
+6. Create a Pull Request. - Follow this guide https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github to raise a PR.
 
 ### Note: If you need detailed info on Pull request
 https://www.atlassian.com/git/tutorials/making-a-pull-request.
-
-### A to Z for Open Source Contribution
-The Definitive Guide to Contributing to Open Source by @DoomHammerNG
-An Intro to Open Source - Tutorials by DigitalOcean to guide you on your way to contribution success here on GitHub.
-Open Source Guides - Collection of resources for individuals, communities, and companies who want to learn how to run and contribute to an Open Source project.

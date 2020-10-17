@@ -9,6 +9,7 @@ import rootSaga from './sagas';
 import './index.scss'
 
 const sagaMiddleware = createSagaMiddleware();
+
 const composeEnhancers =
     typeof window === 'object' &&
         window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
@@ -16,10 +17,13 @@ const composeEnhancers =
             trace: true,
             traceLimit: 25
         }) : compose;
+
 const enhancer = composeEnhancers(
     applyMiddleware(sagaMiddleware)
 );
+
 const store = createStore(reducer, enhancer);
+
 sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(
