@@ -18,7 +18,31 @@ body{
     margin-top: 1rem;
     text-align: center;
 }
+
 .logo {
-    height: 17vmin;
-    pointer-events: none;
+    width: 17vmin;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    padding-inline-start: 0;
+
+    li {
+        position: relative;
+        display: flex;
+
+        &:not(:first-child) {
+            margin-left: 10vmin;
+
+            &:after{
+                position: absolute;
+                content: "•";
+                left: -5vmin;
+                top: 50%;
+                transform: scale(3);
+              }
+        }
+       
+    }
 }
