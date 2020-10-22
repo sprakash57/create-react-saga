@@ -3,18 +3,18 @@
   font-weight: 700;
   border: none;
   outline: none;
-  border-radius: 3em;
+  border-radius: 0.8rem;
   color: white;
   cursor: pointer;
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
-  padding: 15px 30px;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
 }
 .primary {background-color: #1ea7fd;}
 .secondary {background-color: #6c757d;}
-.success {background-color: #28a745;}
+.success {background-color: #0ed145;}
 .danger {background-color: tomato;}
 .warning {background-color: #ffc107; color: #212529;}
 .link {background-color: transparent; color: #007bff;}

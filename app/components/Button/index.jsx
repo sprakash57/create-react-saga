@@ -17,7 +17,7 @@ export const Button = ({ variant, label, ...props }) => {
 };
 
 Button.propTypes = {
-  variant: PropTypes.oneOf(['primary, secondary, success, danger, warning, link']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'link']),
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };

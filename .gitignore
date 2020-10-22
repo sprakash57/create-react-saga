@@ -1,6 +1,7 @@
 node_modules/
 .DS_Store
 /dist
+/app/__tests__/__snapshots__
 
 # local env files
 .env.local

@@ -57,7 +57,8 @@
       "jsx"
     ],
     "moduleNameMapper": {
-      "\\.svg$": "<rootDir>/fileTransformer.js"
+      "\\.(svg|jpeg|jpg|png|ico)$": "<rootDir>/app/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "<rootDir>/app/__mocks__/styleMock.js"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.js"

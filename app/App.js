@@ -5,9 +5,7 @@ import { bindActionCreators } from 'redux';
 import { fetchUsers } from './actions';
 import User from './common/User';
 import Alert from './common/Alert';
-import reactLogo from '../assets/reactLogo.svg';
-import webpackLogo from '../assets/webpackLogo.svg';
-import reduxLogo from '../assets/reduxLogo.svg';
+import wrs from '../assets/wrs.png';
 import { Button } from './components/Button';
 
 export const App = ({ state, fetchUsers }) => {
@@ -30,19 +28,8 @@ export const App = ({ state, fetchUsers }) => {
 
   return (
     <main className="t-center">
-      <ul className="logos">
-        <li>
-          <img src={webpackLogo} className="logo" alt="webpackLogo" />
-        </li>
-        <li>
-          <img src={reactLogo} className="logo" alt="reactLogo" />
-        </li>
-        <li>
-          <img src={reduxLogo} className="logo" alt="reduxLogo" />
-        </li>
-      </ul>
-      <h1>Click Fetch & let Saga does the rest.</h1>
-      <Button label="Fetch" onClick={loadUsers} />
+      <img src={wrs} className="logo" alt="webpackLogo" />
+      <h1 className="t-header">Click <Button label="Fetch" variant="success" onClick={loadUsers} /> & let Saga does the rest.</h1>
       {loading ? <Alert message="Loading..." /> : renderUser()}
     </main>
   );

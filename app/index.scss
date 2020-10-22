@@ -18,31 +18,10 @@ body{
     margin-top: 1rem;
     text-align: center;
 }
-
 .logo {
-    width: 17vmin;
+    width: 30vmin;
 }
-
-.logos {
-    display: flex;
-    justify-content: center;
-    padding-inline-start: 0;
-
-    li {
-        position: relative;
-        display: flex;
-
-        &:not(:first-child) {
-            margin-left: 10vmin;
-
-            &:after{
-                position: absolute;
-                content: "•";
-                left: -5vmin;
-                top: 50%;
-                transform: scale(3);
-              }
-        }
-       
-    }
+.t-header{
+    color: #1c78c0;
+    margin-top: 5px;
 }
