@@ -29,7 +29,7 @@ export const App = ({ state, fetchUsers }) => {
   return (
     <main className="t-center">
       <img src={wrs} className="logo" alt="webpackLogo" />
-      <h1 className="t-header">Click <Button label="Fetch" variant="success" onClick={loadUsers} /> & let Saga does the rest.</h1>
+      <h1 className="t-header">Click <Button label="Fetch" variant="success" onClick={loadUsers} /> & let Saga do the rest.</h1>
       {loading ? <Alert message="Loading..." /> : renderUser()}
     </main>
   );
