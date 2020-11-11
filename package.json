@@ -1,6 +1,6 @@
 {
   "name": "@sprakash57/create-wrsa",
-  "version": "1.0.0",
+  "version": "0.7.1",
   "description": "A CLI tool to bootstrap your webpack-react-saga app",
   "main": "index.js",
   "bin": {
@@ -18,13 +18,17 @@
     "create-wrsa",
     "webpack-react-saga"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Sunny Prakash",
+  "license": "MIT",
   "dependencies": {
     "arg": "^4.1.3",
+    "boxen": "^4.2.0",
     "chalk": "^4.1.0",
     "esm": "^3.2.25",
+    "execa": "^4.1.0",
     "inquirer": "^7.3.3",
-    "ncp": "^2.0.0"
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^1.0.0"
   }
 }

@@ -1,7 +1,6 @@
 {
-  "name": "webpack-react-saga",
-  "version": "0.6.3",
-  "description": "Starter code for your next React Saga application",
+  "name": "first-project",
+  "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -10,9 +9,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "keywords": [],
-  "author": "Sunny Prakash",
-  "license": "MIT",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
