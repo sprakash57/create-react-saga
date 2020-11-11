@@ -1,6 +1,6 @@
 {
   "name": "@sprakash57/create-wrsa",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "description": "A CLI tool to bootstrap your webpack-react-saga app",
   "main": "index.js",
   "bin": {

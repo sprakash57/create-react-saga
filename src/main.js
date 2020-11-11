@@ -10,12 +10,12 @@ import boxen from 'boxen';
 
 const access = promisify(fs.access);
 const copy = promisify(ncp);
-const boxenOptions = {
+const successBox = {
     padding: 1,
     margin: 1,
     borderStyle: "round",
     borderColor: "green"
-};
+}
 
 const copyCoreFiles = async (options) => {
     const packageJsonPath = path.resolve(path.dirname(__filename), '../core', 'package.json');
@@ -65,8 +65,18 @@ export const createProject = async (options) => {
         },
     ]);
 
-    await tasks.run();
+    // await tasks.run();
     console.log("%s: Project is ready.", chalk.green.bold("DONE"));
-    console.log(boxen(chalk.green("Happy Coding with Webpack-React-Saga !!"), boxenOptions))
+    console.log(`
+
+    You can try below commands in your root directory -
+
+    1. ${chalk.green("npm start")} --> To run project locally at ${chalk.yellow.underline("http://localhost:3000")}.
+
+    2. ${chalk.green("npm build")} --> Create production build to ${chalk.yellow("dist")} folder.
+
+    3. ${chalk.green("npm test")} --> Run all the test cases.
+    `);
+    console.log(boxen(chalk.green("Happy Coding with Webpack-React-Saga!!"), successBox));
     return true;
 };
