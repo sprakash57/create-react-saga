@@ -19,7 +19,7 @@
     "webpack-react-saga"
   ],
   "author": "Sunny Prakash",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "arg": "^4.1.3",
     "boxen": "^4.2.0",
