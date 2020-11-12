@@ -1,13 +1,16 @@
 import chalk from 'chalk';
 
 export const helpMessage = `
-    create-react-saga [project-name] ${chalk.yellow("<options>")}
+    1. How to use?
 
-    options -
-    
-    1. ${chalk.yellow("--git / -g")} ==> If you want to initialize or not. Default is false.
-    
-    2. ${chalk.yellow("--help / -g")} ==> To list down all the available options.
+        create-react-saga <project-name> ${chalk.yellow("[options]")}
+        - You can use (.) operator instead of ${chalk.blue("<project-name>")}. It will copy starter file to the current directory
 
-    3. ${chalk.yellow("--version / -v")} ==> Display the version of CLI.
+    2. What options are available?
+    
+        ${chalk.yellow("--git, -g")}          If you want to initialize or not. Default is false.
+ 
+        ${chalk.yellow("--help, -h")}         To list down all the available options.
+
+        ${chalk.yellow("--version, -v")}      Display the version of create-react-saga CLI.
 `

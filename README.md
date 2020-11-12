@@ -14,18 +14,6 @@ Then you have come to the right place. See the features section for detailed inf
 
 You can find the live demo of the running boilerplate over [here](https://master.d3knmnietsgia5.amplifyapp.com)
 
-## 💻 Technology Stack
-
-- **React Hooks**
-- **Redux-Saga**
-- **ES6+**
-- **Sass**
-- **Webpack**
-- **Jest**
-- **Enzyme**
-- **Storybook.js**
-- **Babel**
-
 ## 🚀 Features
 - Lean and easy to understand webpack configurations for production and development environment.
 - In-built Scss support. No need to sweat anymore for modern CSS.
@@ -39,21 +27,35 @@ You can find the live demo of the running boilerplate over [here](https://master
 - Redux devtool integration with trace enabled.
 - Storybook.js to showcase your componet ahead of feature development.
 
+## 💻 Technology Stack
+
+- **React hooks**
+- **Redux-Saga**
+- **ES6+**
+- **Sass**
+- **Webpack**
+- **Jest**
+- **Enzyme**
+- **Storybook.js**
+- **Babel**
+
 ## 📙 Documentation
 `npx create-react-saga --help` will show you all available options.
-> Detailed version of the documentation is under development.
+> Detailed version of the documentation is under development. It will be available soon. Keep checking this space.
+
+<p><img src="./images/help.png" alt="help"/></p>
 
 ## How to use?
 ```
-$ npx create-react-app my-first-project
+$ npx create-react-saga my-first-project
 $ cd my-first-project
 $ npm start
 ```
-> Open `localhost:3000` in the Browser.
+Open `http://localhost:3000` in the Browser.
 > (npx comes with npm 5.2+ and higher, see instructions for older npm versions)
 
 ## Project structure
-`create-react-app` will create below project structure -
+`create-react-saga` will create below project structure -
 
 ```
 my-first-project
@@ -86,16 +88,16 @@ my-first-project
     └── index.scss
 ```
 
-### Production build
+## Production build
     $ npm run build
 
     > Bundle files can be found in `dist` folder under root directory
 
-### Storybook
+## Storybook
     $ npm run storybook
 
     > Open `localhost:6006` in the Browser.
 
-### License
+## License
 
 Create React Saga is open source software [licensed as MIT](https://github.com/facebook/create-react-saga/blob/master/LICENSE). The logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
