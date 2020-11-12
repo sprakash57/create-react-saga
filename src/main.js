@@ -8,7 +8,6 @@ import Listr from 'listr';
 import { projectInstall } from 'pkg-install';
 import boxen from 'boxen';
 
-const access = promisify(fs.access);
 const copy = promisify(ncp);
 const successBox = {
     padding: 1,
@@ -37,17 +36,12 @@ const initGit = async (options) => {
 
 export const createProject = async (options) => {
     const source = path.resolve(path.dirname(__filename), '../core');
+    const target = options.directory === "." ? process.cwd() : `${process.cwd()}\\${options.directory}`;
     options = {
         ...options,
         source,
-        target: `${process.cwd()}\\${options.directory}`,
+        target
     };
-    try {
-        await access(source, fs.constants.R_OK);
-    } catch (error) {
-        console.error("%s: Invalid template name", chalk.red.bold("ERROR"));
-        process.exit(1);
-    }
 
     const tasks = new Listr([
         {

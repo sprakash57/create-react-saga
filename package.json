@@ -1,6 +1,6 @@
 {
   "name": "@sprakash57/create-react-saga",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "A CLI tool to bootstrap your React-Redux-Saga app with configurable Webpack",
   "main": "index.js",
   "bin": {
@@ -17,6 +17,7 @@
     "cli",
     "create-react-saga",
     "webpack-react-saga",
+    "react-redux",
     "redux-saga",
     "webpack"
   ],

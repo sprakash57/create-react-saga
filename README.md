@@ -2,15 +2,13 @@
   <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="blank"><img src="./core/assets/wrs.png" width="320" alt="WRSa logo" /></a>
 </p>
 
-<p align="center">Starter code for your next React Saga application</p>
+<h1 align="center">Create React Saga</h1>
 
-`create-wrsa` is CLI tool for quickly setup your next Webpack-React-Saga application. React codebase which has Redux-Saga and Scss setup from the scratch? Not sure how to setup Webpack and babel? Want to stay away from Create-React-App? Well if you have these mind-boggling question then you come to the right place. Webpack-React-Saga is is one stop solution for 
-- Rapidly build POC(Proof of Concepts) around React hooks and Redux-Saga with webpack.
-- Boilerplate code for your next big assignment.
-- In built configuration for Production and Develop environment.
-- Storybooks provided, to build components ahead of time.
+`create-wrsa` is CLI tool for quickly setup your next clutter free webpack backed React application. It provides you latest hooks based codebase, test files and storybooks. See the features section for more details.
 
-You can find the live demo over [here](https://master.d3knmnietsgia5.amplifyapp.com)
+## 📺 Demo
+
+You can find the live demo of the running boilerplate over [here](https://master.d3knmnietsgia5.amplifyapp.com)
 
 ## 💻 Technology Stack
 
@@ -36,6 +34,10 @@ You can find the live demo over [here](https://master.d3knmnietsgia5.amplifyapp.
 - Optimized bundle size for production.
 - Redux devtool integration with trace enabled.
 - Storybook.js to showcase your componet ahead of feature development.
+
+## 📙 Documentation
+
+Coming soon...
 
 ## How to use?
 
