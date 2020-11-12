@@ -51,7 +51,7 @@ export const createProject = async (options) => {
 
     const tasks = new Listr([
         {
-            title: 'Copying project files...',
+            title: 'Generating starter code...',
             task: () => copyCoreFiles(options),
         },
         {
@@ -60,7 +60,7 @@ export const createProject = async (options) => {
             enabled: () => options.git,
         },
         {
-            title: 'Installing dependencies...',
+            title: 'Installing dependencies. It will take few minutes',
             task: () => projectInstall({ cwd: options.target })
         },
     ]);
@@ -77,6 +77,6 @@ export const createProject = async (options) => {
 
     3. ${chalk.green("npm test")} --> Run all the test cases.
     `);
-    console.log(boxen(chalk.green("Happy Coding with Webpack-React-Saga!!"), successBox));
+    console.log(boxen(chalk.green(`Happy Coding with ${options.directory}!!`), successBox));
     return true;
 };

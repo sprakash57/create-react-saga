@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="blank"><img src="./assets/wrs.png" width="320" alt="WRSa logo" /></a>
+  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="blank"><img src="./core/assets/wrs.png" width="320" alt="WRSa logo" /></a>
 </p>
 
 <p align="center">Starter code for your next React Saga application</p>
 
-Are you looking for a React codebase which has Redux-Saga and Scss setup from the scratch? Not sure how to setup Webpack and babel? Want to stay away from Create-React-App? Well if you have these mind-boggling question then you come to the right place. Webpack-React-Saga is is one stop solution for 
+`create-wrsa` is CLI tool for quickly setup your next Webpack-React-Saga application. React codebase which has Redux-Saga and Scss setup from the scratch? Not sure how to setup Webpack and babel? Want to stay away from Create-React-App? Well if you have these mind-boggling question then you come to the right place. Webpack-React-Saga is is one stop solution for 
 - Rapidly build POC(Proof of Concepts) around React hooks and Redux-Saga with webpack.
 - Boilerplate code for your next big assignment.
 - In built configuration for Production and Develop environment.

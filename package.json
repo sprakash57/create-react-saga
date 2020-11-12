@@ -1,11 +1,11 @@
 {
-  "name": "@sprakash57/create-wrsa",
+  "name": "@sprakash57/create-react-saga",
   "version": "0.7.3",
-  "description": "A CLI tool to bootstrap your webpack-react-saga app",
+  "description": "A CLI tool to bootstrap your React-Redux-Saga app with configurable Webpack",
   "main": "index.js",
   "bin": {
-    "@sprakash57/create-wrsa": "bin/create-wrsa",
-    "create-wrsa": "bin/create-wrsa"
+    "@sprakash57/create-react-saga": "bin/create-react-saga",
+    "create-react-saga": "bin/create-react-saga"
   },
   "publishConfig": {
     "access": "public"
@@ -15,8 +15,10 @@
   },
   "keywords": [
     "cli",
-    "create-wrsa",
-    "webpack-react-saga"
+    "create-react-saga",
+    "webpack-react-saga",
+    "redux-saga",
+    "webpack"
   ],
   "author": "Sunny Prakash",
   "license": "ISC",
