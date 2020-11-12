@@ -4,7 +4,6 @@
   "description": "A CLI tool to bootstrap your React-Redux-Saga app with configurable Webpack",
   "main": "index.js",
   "bin": {
-    "@sprakash57/create-react-saga": "bin/create-react-saga",
     "create-react-saga": "bin/create-react-saga"
   },
   "publishConfig": {
