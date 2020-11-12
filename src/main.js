@@ -59,7 +59,7 @@ export const createProject = async (options) => {
         },
     ]);
 
-    // await tasks.run();
+    await tasks.run();
     console.log("%s: Project is ready.", chalk.green.bold("DONE"));
     console.log(`
 
