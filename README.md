@@ -100,4 +100,4 @@ my-first-project
 
 ## License
 
-Create React Saga is open source software [licensed as MIT](https://github.com/facebook/create-react-saga/blob/master/LICENSE). The logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+Create React Saga is open source software [licensed as MIT](https://github.com/sprakash57/create-react-saga/blob/master/LICENSE). The logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
