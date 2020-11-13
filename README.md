@@ -1,8 +1,9 @@
 <p align="center">
-  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="blank"><img src="./core/assets/wrs.png" width="320" alt="WRSa logo" /></a>
+  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="blank"><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/core/assets/wrs.png" width="320" alt="WRSa logo" /></a>
 </p>
 
 <h1 align="center">Create React Saga</h1>
+[![NPM](https://img.shields.io/npm/v/create-react-saga.svg)](https://www.npmjs.com/package/create-react-saga)
 
 `create-react-saga` is a CLI tool for quickly setup your next clutter free webpack backed React application. It provides you latest hooks based codebase, test files and storybooks. If you are thinking of below -
 1. Create components ahead of development for early reviews.
@@ -43,7 +44,7 @@ You can find the live demo of the running boilerplate over [here](https://master
 `npx create-react-saga --help` will show you all available options.
 > Detailed version of the documentation is under development. It will be available soon. Keep checking this space.
 
-<p><img src="./images/help.png" alt="help"/></p>
+<p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
 
 ## How to use?
 ```
