@@ -3,6 +3,7 @@
 </p>
 
 <h1 align="center">Create React Saga</h1>
+
 [![NPM](https://img.shields.io/npm/v/create-react-saga.svg)](https://www.npmjs.com/package/create-react-saga)
 
 `create-react-saga` is a CLI tool for quickly setup your next clutter free webpack backed React application. It provides you latest hooks based codebase, test files and storybooks. If you are thinking of below -
@@ -19,7 +20,7 @@ You can find the live demo of the running boilerplate over [here](https://master
 - Lean and easy to understand webpack configurations for production and development environment.
 - In-built Scss support. No need to sweat anymore for modern CSS.
 - Unit test included for starter kit code to get you started quickly.
-- Functional components and hooks 😍.
+- Functional components and hooks approach.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
 - Proper implementation of Redux-Saga for async calls without polluting redux actions.
 - Boilerplate code is based on a real-world project done for one of my clients.
@@ -42,20 +43,22 @@ You can find the live demo of the running boilerplate over [here](https://master
 
 ## 📙 Documentation
 `npx create-react-saga --help` will show you all available options.
-> Detailed version of the documentation is under development. It will be available soon. Keep checking this space.
 
 <p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
 
-## How to use?
+> Detailed version of the documentation is under development. It will be available soon. Keep checking this space.
+
+## 🤔 How to use?
 ```
 $ npx create-react-saga my-first-project
 $ cd my-first-project
 $ npm start
 ```
 Open `http://localhost:3000` in the Browser.
-> (npx comes with npm 5.2+ and higher, see instructions for older npm versions)
 
-## Project structure
+> npm 5.2+ version is required for npx to work.
+
+## 🌲 Project structure
 `create-react-saga` will create below project structure -
 
 ```
@@ -89,16 +92,16 @@ my-first-project
     └── index.scss
 ```
 
-## Production build
+## ✔ Production build
     $ npm run build
 
-    > Bundle files can be found in `dist` folder under root directory
+> Bundle files can be found in `dist` folder under root directory
 
-## Storybook
+## 📚 Storybook
     $ npm run storybook
 
-    > Open `localhost:6006` in the Browser.
+> Open `localhost:6006` in the Browser.
 
-## License
+## 📑 License
 
 Create React Saga is open source software [licensed as MIT](https://github.com/sprakash57/create-react-saga/blob/master/LICENSE). The logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
