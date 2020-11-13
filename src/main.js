@@ -54,7 +54,7 @@ export const createProject = async (options) => {
             enabled: () => options.git,
         },
         {
-            title: 'Installing dependencies. It will take few minutes',
+            title: 'Installing dependencies. It will take few minutes.',
             task: () => projectInstall({ cwd: options.target })
         },
     ]);
