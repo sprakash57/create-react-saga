@@ -18,5 +18,6 @@ export const helpMsg = `
 
 /**
  * @param {array} listOfDir - List of directories to join 
+ * @returns {string} - path
  */
 export const getPath = listOfDir => path.resolve(path.dirname(__filename), ...listOfDir);
