@@ -1,12 +1,12 @@
 import chalk from 'chalk';
 import fs from 'fs';
 import ncp from 'ncp';
-import path from 'path';
 import { promisify } from 'util';
 import execa from 'execa';
 import Listr from 'listr';
 import { projectInstall } from 'pkg-install';
 import boxen from 'boxen';
+import { getPath } from './libs';
 
 const copy = promisify(ncp);
 const successBox = {
@@ -17,31 +17,32 @@ const successBox = {
 }
 
 const copyCoreFiles = async (options) => {
-    const packageJsonPath = path.resolve(path.dirname(__filename), '../core', 'package.json');
+    const packageJsonPath = getPath('package.json');
     const raw = fs.readFileSync(packageJsonPath);
     const packageJson = JSON.parse(raw);
     packageJson.name = options.directory;
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     const { source, target } = options;
-    return copy(source, target, { clobber: false });
+    copy(source, target, { clobber: false });
+    //Hack to replace .npmignore with .gitignore
+    return copy(getPath("../.gitignore"), target, { clobber: false })
 };
 
 const initGit = async (options) => {
-    const result = await execa('git', ['init'], {
-        cwd: options.target
-    });
+    const result = await execa(
+        'git',
+        ['init'],
+        {
+            cwd: options.target
+        }
+    );
     if (result.failed) return Promise.reject(new Error("Failed to initialize git"));
     return;
 }
 
 export const createProject = async (options) => {
-    const source = path.resolve(path.dirname(__filename), '../core');
-    const target = options.directory === "." ? process.cwd() : `${process.cwd()}\\${options.directory}`;
-    options = {
-        ...options,
-        source,
-        target
-    };
+    options.source = getPath("../core");
+    options.target = options.directory === "." ? process.cwd() : `${process.cwd()}\\${options.directory}`;
 
     const tasks = new Listr([
         {
@@ -54,7 +55,7 @@ export const createProject = async (options) => {
             enabled: () => options.git,
         },
         {
-            title: 'Installing dependencies. It will take few minutes.',
+            title: 'Installing dependencies. It will take few minutes. Please do not cancel the installation.',
             task: () => projectInstall({ cwd: options.target })
         },
     ]);
@@ -65,11 +66,11 @@ export const createProject = async (options) => {
 
     You can try below commands in your root directory -
 
-    1. ${chalk.green("npm start")} --> To run project locally at ${chalk.yellow.underline("http://localhost:3000")}.
+    1. ${chalk.green("npm start")} ==> To run project locally at ${chalk.yellow.underline("http://localhost:3000")}.
 
-    2. ${chalk.green("npm build")} --> Create production build to ${chalk.yellow("dist")} folder.
+    2. ${chalk.green("npm build")} ==> Create production build to ${chalk.yellow("dist")} folder.
 
-    3. ${chalk.green("npm test")} --> Run all the test cases.
+    3. ${chalk.green("npm test")} ==> Run all the test cases.
     `);
     console.log(boxen(chalk.green(`Happy Coding with ${options.directory}!!`), successBox));
     return true;

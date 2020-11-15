@@ -22,7 +22,7 @@ You can find the live demo of the running boilerplate over [here](https://master
 - Unit test included for starter kit code to get you started quickly.
 - Functional components and hooks approach.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
-- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [jsonplaceholder](https://jsonplaceholder.typicode.com) for its fake API service.
+- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [jsonplaceholder](https://jsonplaceholder.typicode.com) for its API service.
 - Boilerplate code is based on a real-world project done for one of my clients.
 - Constant maintenance and package updates.
 - Optimized bundle size for production.

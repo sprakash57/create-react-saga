@@ -2,7 +2,7 @@ import arg from 'arg';
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
-import { helpMessage } from './helpMessage.js';
+import { helpMsg } from './libs.js';
 import { createProject } from './main.js';
 
 const parseArgs = (inputArgs) => {
@@ -63,7 +63,7 @@ const alertMissingOptions = async (options) => {
 export const cli = async (args) => {
     let options = parseArgs(args);
     if (options.help) {
-        console.log(helpMessage);
+        console.log(helpMsg);
     } else if (options.version) {
         let packageJson = path.resolve(path.dirname(__filename), '../package.json');
         packageJson = JSON.parse(fs.readFileSync(packageJson));
