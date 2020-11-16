@@ -30,7 +30,7 @@ const initGit = async (options) => {
     const result = await execa('git', ['init'], {
         cwd: options.target
     });
-    const raw = fs.readFileSync(getPath(["../.gitignore"]));
+    const raw = fs.readFileSync(getPath(["../assets", "gitignore"]));
     fs.writeFileSync(getPath([options.target, ".gitignore"]), raw.toString());
     if (result.failed) return Promise.reject(new Error("Failed to initialize git"));
     return;
