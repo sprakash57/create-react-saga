@@ -30,7 +30,8 @@ const initGit = async (options) => {
     const result = await execa('git', ['init'], {
         cwd: options.target
     });
-    copy(getPath(["../.gitignore"]), `${options.target}\\.gitignore`, { clobber: false });
+    const raw = fs.readFileSync(getPath(["../.gitignore"]));
+    fs.writeFileSync(getPath([options.target, ".gitignore"]), raw.toString());
     if (result.failed) return Promise.reject(new Error("Failed to initialize git"));
     return;
 }
@@ -57,7 +58,7 @@ export const createProject = async (options) => {
         {
             title: 'Installing dependencies. It will take few minutes. Please do not cancel the installation.',
             task: () => projectInstall({ cwd: options.target, verbose: true })
-        }
+        },
     ]);
 
     await tasks.run();
