@@ -6,24 +6,24 @@
 
 [![NPM](https://img.shields.io/npm/v/create-react-saga.svg)](https://www.npmjs.com/package/create-react-saga)
 
-`create-react-saga` is a CLI tool for quickly setup your next clutter free webpack backed React application. It provides you latest hooks based codebase, test files and storybooks. If you are thinking of below -
+`create-react-saga` is a CLI tool for quickly setup your next clutter free webpack backed React application. It provides you latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
 1. Create components ahead of development for early reviews.
 2. Want to use Redux-Saga middleware for async calls.
 3. Proper testing environment setup for React hooks.
-Then you have come to the right place. See the features section for detailed info. 
+
+Then you have come to the right place. You will get most vanilla React experience ever. See the features section for detailed info. 
 
 ## 📺 Demo
 
-You can find the live demo of the running boilerplate over [here](https://master.d3knmnietsgia5.amplifyapp.com)
+You can find the live demo of the running boilerplate over [here](https://live.d3knmnietsgia5.amplifyapp.com/)
 
 ## 🚀 Features
 - Lean and easy to understand webpack configurations for production and development environment.
-- In-built Scss support. No need to sweat anymore for modern CSS.
-- Unit test included for starter kit code to get you started quickly.
-- Functional components and hooks approach.
+- Built-in Scss support. No need to sweat anymore over modern CSS.
+- Unit test utilities and example included for starter kit code to get you up to speed without wasting any time.
+- Functional component has been used in the entire place. No more old `class`.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
 - Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [jsonplaceholder](https://jsonplaceholder.typicode.com) for its API service.
-- Boilerplate code is based on a real-world project done for one of my clients.
 - Constant maintenance and package updates.
 - Optimized bundle size for production.
 - Redux devtool integration with trace enabled. Download [redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extenstion to track saga calls.
@@ -54,7 +54,7 @@ $ npx create-react-saga my-first-project
 $ cd my-first-project
 $ npm start
 ```
-Open `http://localhost:3000` in the Browser.
+Open [localhost:3000](http://localhost:3000) in the Browser.
 
 > npm 5.2+ version is required for npx to work.
 
@@ -93,14 +93,18 @@ my-first-project
 ```
 
 ## ✔ Production build
-    $ npm run build
+```
+$ npm run build
+```
 
-> Bundle files can be found in `dist` folder under root directory
+Bundle files can be found in `dist` folder under root directory
 
 ## 📚 Storybook
-    $ npm run storybook
+```
+$ npm run storybook
+```
 
-> Open `localhost:6006` in the Browser.
+Open [localhost:6006](http://localhost:6006) in the Browser.
 
 ## 📑 License
 
