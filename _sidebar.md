@@ -1,0 +1,8 @@
+* [Getting Started](/)
+* [Configuration](configuration.md)
+* [Components](components.md)
+* [Styling](styling.md)
+* [Testing](testing.md)
+* [API integration](api.md)
+* [Deployment](deployment.md)
+* [Showcase](showcase.md)

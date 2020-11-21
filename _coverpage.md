@@ -1,11 +1,10 @@
-![Create React Saga](./wrs.png)
+![Create React Saga](./assets/wrs.png)
+
+# **Create React Saga**
 
 > A CLI tool to bootstrap your next modern React application.
 
-- React hooks based clutter free starter codebase
-- Redux saga implementation in an efficient way to achieve async calls
-- Storybooks to develop component ahead of time
-- Easy to understand and configure Webpack.
+- Built-in Redux-Saga for async calls and storybooks to develop components ahead of time.
 
 [GitHub](https://github.com/sprakash57/create-react-saga/)
-[Get Started](#create-react-saga)
+[Get Started](#what-is-create-react-saga)
