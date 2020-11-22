@@ -4,5 +4,5 @@
 * [Styling](styling.md)
 * [Testing](testing.md)
 * [API integration](api.md)
-* [Deployment](deployment.md)
-* [Showcase](showcase.md)
+* [Showcase](deployment.md)
+* [Suppport](showcase.md)

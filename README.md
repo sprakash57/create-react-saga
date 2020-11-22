@@ -20,7 +20,7 @@ Then you have come to the right place. You will get most vanilla React experienc
 - Storybook.js to showcase your componet ahead of feature development.
 
 ## Prerequisites
-You should have node.js version 10+ installed on your local machine. Visit https://nodejs.org if you haven't done so. Run below command to check the installed version
+You should have node.js version 10+ installed on your local machine. Visit [here](https://nodejs.org/en/download/) and download if you haven't done so. Run below command to check the installed version
 
 ```
 $ node -v
@@ -34,39 +34,6 @@ $ npm start
 Open [localhost:3000](http://localhost:3000) to see the app running.
 
 > npm 5.2+ version is required for npx to work.
-
-## Libraries
-
-Before you start developing your awesome app, you should be aware of tech and tools comes with Create React Saga. So that you can quickly start implementing your business logic without wasting any moment in configuration and installation of npm libraries. Below packages you get out of the box.
-
-- **React hooks**
-- **Redux-Saga**
-- **ES6+**
-- **Sass**
-- **Webpack**
-- **Jest**
-- **Enzyme**
-- **Storybook.js**
-- **Babel**
-
-## Scripts
-
-### `npx create-react-saga --help`
-It will show you all the available options comes with Create React Saga
-
-<p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
-
-### `npx create-react-saga --git`
-Getting your starter kit comes with initialized git repo. You just need to provide the `--git` flag. If you want to skip the git initialization, don't include the flag and you are good to go.
-
-### `npm build`
-Once you are done with your development and now you want to build your app. This command do just that. Once you run the command, you will find a directory under root folder named as `dist`. It will contain the bundles and `index.html` files ready to be deployed.
-
-### `npm test`
-Create React Saga has already prototype app built-in with proper unit test cases. Running the command will execute all the test cases present under `__tests__` directory or any file with `.test.js`/`.spec.js` extension.
-
-### `npm run storybook`
-Stories can be found running on [localhost:6006](http://localhost:6006) in the Browser. You can interact with your components without any hassle.
 
 ## Project structure
 Running `npx create-react-saga my-first-project --git` will create below project structure -
@@ -101,6 +68,39 @@ my-first-project
     ├── index.js
     └── index.scss
 ```
+
+## Libraries
+
+Before you start developing your awesome app, you should be aware of tech and tools comes with Create React Saga. So that you can quickly start implementing your business logic without wasting any moment in configuration and installation of npm libraries. Below packages you get out of the box.
+
+- **React hooks**
+- **Redux-Saga**
+- **ES6+**
+- **Sass**
+- **Webpack**
+- **Jest**
+- **Enzyme**
+- **Storybook.js**
+- **Babel**
+
+## Scripts
+
+### `npx create-react-saga --help`
+It will show you all the available options comes with Create React Saga
+
+<p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
+
+### `npx create-react-saga --git`
+Getting your starter kit comes with initialized git repo. You just need to provide the `--git` flag. If you want to skip the git initialization, don't include the flag and you are good to go.
+
+### `npm build`
+Once you are done with your development and now you want to build your app. This command do just that. Once you run the command, you will find a directory under root folder named as `dist`. It will contain the bundles and `index.html` files ready to be deployed.
+
+### `npm test`
+Create React Saga has already prototype app built-in with proper unit test cases. Running the command will execute all the test cases present under `__tests__` directory or any file with `.test.js`/`.spec.js` extension.
+
+### `npm run storybook`
+Stories can be found running on [localhost:6006](http://localhost:6006) in the Browser. You can interact with your components without any hassle.
 ## License
 
 Create React Saga is open source software [licensed as MIT](https://github.com/sprakash57/create-react-saga/blob/master/LICENSE). The logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
