@@ -21,7 +21,7 @@ If you are building your app and want your assets present in your `dist` folder.
 
 ## Styling your app
 
-Create React Saga comes with [SCSS](https://sass-lang.com/guide) support. So that you can use mixins, nested properties, variables and lot more, right from the start. You just need to import proper `.scss` file and all done. Webpack will take care of minifying all your stylesheets.
+Create React Saga comes with <a href="https://sass-lang.com/guide" target="_blank">SCSS</a> support. So that you can use mixins, nested properties, variables and lot more, right from the start. You just need to import proper `.scss` file and all done. Webpack will take care of minifying all your stylesheets.
 
 ```
 import './button.scss';

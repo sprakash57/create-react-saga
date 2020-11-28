@@ -13,14 +13,14 @@ Then you have come to the right place. You will get most vanilla React experienc
 - Unit test utilities and example included for starter kit code to get you up to speed without wasting any time.
 - Functional component has been used in the entire place. No more old `class`.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
-- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [jsonplaceholder](https://jsonplaceholder.typicode.com) for its API service.
+- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to <a href="https://jsonplaceholder.typicode.com" target="_blank">jsonplaceholder</a> for awesome APIs.
 - Constant maintenance and package updates.
 - Optimized bundle size for production.
-- Redux devtool integration with trace enabled. Download [redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extenstion to track saga calls.
+- Redux devtool integration with trace enabled. Download <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd" target="_blank">redux-devtools</a> extenstion to track saga calls.
 - Storybook.js to showcase your componet ahead of feature development.
 
 ## Prerequisites
-You should have node.js version 10+ installed on your local machine. Visit [here](https://nodejs.org/en/download/) and download if you haven't done so. Run below command to check the installed version
+You should have node.js version 10+ installed on your local machine. Visit <a href="https://nodejs.org/en/download/" target="_blank">here</a> and download if you haven't done so. Run below command to check the installed version
 
 ```
 $ node -v
@@ -31,7 +31,7 @@ $ npx create-react-saga my-first-project
 $ cd my-first-project
 $ npm start
 ```
-Open [localhost:3000](http://localhost:3000) to see the app running.
+Open <u>http://localhost:3000</u> to see the app running.
 
 > npm 5.2+ version is required for npx to work.
 
@@ -100,7 +100,7 @@ Once you are done with your development and now you want to build your app. This
 Create React Saga has already prototype app built-in with proper unit test cases. Running the command will execute all the test cases present under `__tests__` directory or any file with `.test.js`/`.spec.js` extension.
 
 ### `npm run storybook`
-Stories can be found running on [localhost:6006](http://localhost:6006) in the Browser. You can interact with your components without any hassle.
+Stories can be found running on <u>http://localhost:6006</u> in the Browser. You can interact with your components without any hassle.
 ## License
 
-Create React Saga is open source software [licensed as MIT](https://github.com/sprakash57/create-react-saga/blob/master/LICENSE). The logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+Create React Saga is open source software <a href="https://github.com/sprakash57/create-react-saga/blob/master/LICENSE" target="_blank">. The logo is licensed  under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International license</a>.

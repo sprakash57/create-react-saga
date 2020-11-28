@@ -22,7 +22,7 @@ Plugins are used to perform a wider range of tasks like bundle optimization, ass
 6. **devtool** - 
 If you want to debug your application in the browser through dev tools. you have to keep this option as `inline-source-map` otherwise you can just ignore the field or kepp it as `hidden-source-map`.
 
-> This is just a glimpse of what you can configure and customize in your Create React Saga with the help of webpack. To know more about webpack and how to cinfigure it please visit their [docs](https://v4.webpack.js.org/concepts/). Currently `create-react-saga` is using wepack v4. Migration to v5 is under development. It will be live soon.
+> This is just a glimpse of what you can configure and customize in your Create React Saga with the help of webpack. To know more about webpack and how to cinfigure it please visit their <a href="https://v4.webpack.js.org/concepts/" target="_blank">docs</a>. Currently `create-react-saga` is using wepack v4. Migration to v5 is under development. It will be live soon.
 
 ## Babel
 Babel is included to let user use the latest features of EcmaScript and intorduce polyfils to run the application on various browsers. In the root directory you will find `.babelrc` file that contains bable presets and plugins. babel preset is collection of plugins for behaving cohesively. For example `@babel/preset-react` contains below plugins -

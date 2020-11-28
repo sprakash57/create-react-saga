@@ -7,4 +7,4 @@ Follow below steps -
 4. Uninstall storybook realted packages and addons from your project.
 5. Run `npm install`. Do not run `npm update`.
 
-For more details visit this [github issue](https://github.com/storybookjs/storybook/issues/979).
+For more details visit this <a href="https://github.com/storybookjs/storybook/issues/979" target="_blank">github issue</a>.
