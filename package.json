@@ -1,6 +1,6 @@
 {
   "name": "create-react-saga",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "A CLI tool to bootstrap your React-Redux-Saga app with configurable Webpack and storybook",
   "repository": "https://github.com/sprakash57/create-react-saga",
   "homepage": "https://sprakash57.github.io/create-react-saga",
