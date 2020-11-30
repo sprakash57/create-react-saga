@@ -69,6 +69,7 @@ my-first-project
 ├── webpack.prod.js
 ├── .babelrc
 ├── setupTests.js
+├── jest.config.js
 ├── README.md
 ├── node_modules
 ├── package.json

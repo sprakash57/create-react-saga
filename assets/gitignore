@@ -3,6 +3,7 @@ node_modules
 # builds
 build
 dist
+coverage
 
 # misc
 .DS_Store
