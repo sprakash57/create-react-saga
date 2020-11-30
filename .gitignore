@@ -1,5 +1,6 @@
 node_modules/
 .DS_Store
+coverage
 /dist
 /app/__tests__/__snapshots__
 
