@@ -46,7 +46,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 
 <p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
 
-> Detailed version of the documentation is under development. It will be available soon. Keep checking this space.
+> Detailed version of the documentation can be found over [here](https://sprakash57.github.io/create-react-saga)
 
 ## 🤔 How to use?
 ```
