@@ -26,7 +26,7 @@ your-project
 
 1. `main.js`
 
-This is where you tell storybook to find your stories and what addons you want to include. Yes!! Sotrybook comes with its own add-ons ecosystem. You will find more over <a href="https://storybook.js.org/addons/" target="_blank">here</a>.
+This is where you tell Storybook to find your stories and what add-ons you want to include. Yes!! Storybook comes with its own add-ons ecosystem. You will find more over <a href="https://storybook.js.org/addons/" target="_blank">here</a>.
 
 ```
 module.exports = {
@@ -46,6 +46,6 @@ module.exports = {
 
 This is where you code your components and write stories. `Stories` are the way your component will present in the isolation. You can refer `Button` story already present in your Create React Saga app.
 
-### What if i want to remove it?
+### What if I want to remove it?
 
-Currently Storybook comes out of the box with Create React Saga. So there isn't a way to opt out. Although, in the next release storybook is going to be optional. However if you want to remove it from your bootstrapped project, please see the support section.
+Currently, Storybook comes out of the box with Create React Saga. So there isn't a way to opt out. In the next release storybook is going to be optional. However, if you want to remove it from your bootstrapped project, please see the [support](/support) section.
