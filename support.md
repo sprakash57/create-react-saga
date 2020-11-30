@@ -15,4 +15,4 @@ We would really appreciate if you will file bugs or issues you find along the wa
 
 ### Feedback & Suggestions
 
-We would love to have your valuable feedback. You can send me through https://suprdev.netlify.app/contact.
+We would love to have your valuable feedback. You can send them through https://suprdev.netlify.app/contact.
