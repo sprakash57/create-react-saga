@@ -20,7 +20,7 @@ Output the bundle files to the given directory. You can name the file as per you
 Plugins are used to perform a wider range of tasks like bundle optimization, asset management and injection of environment. In the starter kit you will find `html-webpack-plugin` used to generate an HTML file that has all the bundles injected automatically.
 
 6. **devtool** - 
-If you want to debug your application in the browser through dev tools. you have to keep this option as `inline-source-map` otherwise you can just ignore the field or kepp it as `hidden-source-map`.
+If you want to debug your application in the browser through dev tools. you have to keep this option as `inline-source-map` otherwise you can just ignore the field or keep it as `hidden-source-map`.
 
 > This is just a glimpse of what you can configure and customize in your Create React Saga with the help of webpack. To know more about webpack and how to cinfigure it please visit their <a href="https://v4.webpack.js.org/concepts/" target="_blank">docs</a>. Currently `create-react-saga` is using wepack v4. Migration to v5 is under development. It will be live soon.
 
