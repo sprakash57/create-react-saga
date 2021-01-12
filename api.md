@@ -1,6 +1,6 @@
 ## Fetch Data
 
-Create React Saga at the core uses `fetchData.js` at the core for all external API calls. That is built upon Browser's `fetch API`.
+If you are going to leverage Redux-Saga for your asynchronous calls, you should check out `fetchData.js`. Create-React-Saga uses it at the core for all external API calls. Of course this is built upon Browser's `fetch API`.
 
 ## Redux-Saga
 
