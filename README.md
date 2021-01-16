@@ -6,12 +6,12 @@
 
 [![NPM](https://img.shields.io/npm/v/create-react-saga.svg)](https://www.npmjs.com/package/create-react-saga)
 
-`create-react-saga` is a CLI tool for quickly setup your next clutter free webpack backed React application. It provides you latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
+`create-react-saga` is a CLI tool for quickly setup your next clutter free webpack backed React application. It provides you the latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
 1. Create components ahead of development for early reviews.
 2. Want to use Redux-Saga middleware for async calls.
 3. Proper testing environment setup for React hooks.
 
-Then you have come to the right place. You will get most vanilla React experience ever. See the features section for detailed info. 
+Then you have come to the right place. You will get the most vanilla React experience ever. See the features section for detailed info. 
 
 ## 📺 Demo
 
@@ -23,7 +23,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 - Unit test utilities and example included for starter kit code to get you up to speed without wasting any time.
 - Functional component has been used in the entire place. No more old `class`.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
-- Proper implementation of Redux-Saga for async calls without polluting redux actions.
+- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [JSON placeholder](https://jsonplaceholder.typicode.com/) for their open source API.
 - Constant maintenance and package updates.
 - Optimized bundle size for production.
 - Redux devtool integration with trace enabled. Download [redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extenstion to track saga calls.
