@@ -23,7 +23,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 - Unit test utilities and example included for starter kit code to get you up to speed without wasting any time.
 - Functional component has been used in the entire place. No more old `class`.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
-- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [jsonplaceholder](https://jsonplaceholder.typicode.com) for its API service.
+- Proper implementation of Redux-Saga for async calls without polluting redux actions.
 - Constant maintenance and package updates.
 - Optimized bundle size for production.
 - Redux devtool integration with trace enabled. Download [redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extenstion to track saga calls.

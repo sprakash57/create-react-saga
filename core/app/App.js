@@ -16,11 +16,11 @@ export const App = ({ state, fetchUsers }) => {
   };
 
   const renderUser = () => {
-    if (message) return <Alert message={message} />;
+    if (message) return <Alert message={message} data-testid="alert" />;
     return (
       <section className="users">
         {users.length
-          ? users.map((user) => <User key={user.id} user={user} />)
+          ? users.map((user) => <User key={user.id} user={user} data-testid="user" />)
           : null}
       </section>
     );
@@ -29,7 +29,7 @@ export const App = ({ state, fetchUsers }) => {
   return (
     <main className="t-center">
       <img src={wrs} className="logo" alt="webpackLogo" />
-      <h1 className="t-header">Click <Button label="Fetch" variant="success" onClick={loadUsers} /> & let Saga do the rest.</h1>
+      <h1 className="t-header">Click <Button label="Fetch" variant="success" onClick={loadUsers} data-testid="succss-btn" /> & let Saga do the rest.</h1>
       {loading ? <Alert message="Loading..." /> : renderUser()}
     </main>
   );
