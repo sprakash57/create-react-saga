@@ -1,4 +1,4 @@
-const URL = "https://jsonplaceholder.typicode.com/users";
+const URL = 'https://jsonplaceholder.typicode.com/users';
 
 const headers = {
     'Accept': 'application/json',
