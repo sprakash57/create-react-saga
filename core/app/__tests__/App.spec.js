@@ -1,47 +1,52 @@
+import { cleanup } from '@testing-library/react';
 import { App } from '../App';
-import User from '../common/User';
 
-const initialState = {
-  users: [
-    {
-      id: 1,
-      name: 'john',
-      email: 'johndoe@mail.com',
-      address: {
-        street: 'lorem',
-        city: 'ipsum',
-      },
-      phone: '777-777',
+describe('<App />', () => {
+  const data = {
+    state: {
+      users: [
+        {
+          id: 1,
+          name: 'john',
+          email: 'johndoe@mail.com',
+          address: {
+            street: 'lorem',
+            city: 'ipsum',
+          },
+          phone: '777-777',
+        },
+      ],
+      loading: false,
+      message: '',
     },
-  ],
-  loading: false,
-  message: '',
-};
+    fetchUsers: jest.fn()
+  }
+  const getComponent = (props) => render(<App {...props} />);
 
-let wrapper;
+  afterEach(() => {
+    cleanup();
+  })
 
-const mockFetchUsers = jest.fn();
-
-describe('Test suite App Component', () => {
-  beforeAll(() => {
-    wrapper = mount(<App state={initialState} fetchUsers={mockFetchUsers} />);
+  it('Should snapshots match', () => {
+    const mounted = <App state={initialState} fetchUsers={mockFetchUsers} />;
+    expect(toJson(mounted)).toMatchSnapshot();
   });
 
-  test('Should render properly', () => {
-    expect(wrapper).toBeDefined();
+  it('Should render main container', () => {
+    const { container } = getComponent(data);
+    expect(container.querySelector(".t-center")).toBeTruthy();
   });
 
-  test('Should match snapshot', () => {
-    expect(toJson(wrapper)).toMatchSnapshot();
+  it('Should render <Button /> component', () => {
+    const { getByTestId } = getComponent(data);
+    expect(getByTestId("succss-btn")).toBeTruthy();
   });
 
-  test('Should render user component', () => {
-    const user = wrapper.find(User);
-    expect(user).toHaveLength(1);
+  it('Should display `Loading...` if API call is pending', () => {
+    const newState = { ...data.state, loading: true }
+    const props = { ...data, state: newState }
+    const { getByText } = getComponent(props);
+    expect(getByText('Loading...')).toBeTruthy();
   });
 
-  test('Should call mock load users function', () => {
-    wrapper.find('button').simulate('click');
-    expect(mockFetchUsers.mock.calls.length).toBe(1);
-  });
 });
