@@ -1,6 +1,6 @@
 {
   "name": "create-react-saga",
-  "version": "0.8.8",
+  "version": "0.8.9",
   "description": "A CLI tool to bootstrap your React-Redux-Saga app with configurable Webpack and storybook",
   "repository": "https://github.com/sprakash57/create-react-saga",
   "homepage": "https://sprakash57.github.io/create-react-saga",
@@ -21,11 +21,12 @@
     "assets/"
   ],
   "keywords": [
-    "cli",
     "create-react-saga",
     "react-redux",
     "redux-saga",
-    "webpack"
+    "webpack",
+    "react",
+    "react-app"
   ],
   "author": "Sunny Prakash",
   "license": "MIT",
