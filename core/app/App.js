@@ -10,7 +10,6 @@ import { Button } from './components/Button';
 
 export const App = ({ state, fetchUsers }) => {
   const { users, loading, message } = state;
-
   const loadUsers = () => {
     fetchUsers();
   };
