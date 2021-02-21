@@ -13,14 +13,12 @@ module.exports = (env) => {
             favicon: './assets/favicon.ico'
         })
     ]
-    // Root path of the project where webpack configs can be found.
-    const rootPath = path.join(__dirname);
-    // Default path for .env file. Usually for development.
-    const basePath = rootPath + '/.env';
+    // Path of the env file for development. Usually at the root level.
+    const devEnvPath = `${path.join(__dirname)}/.env`;
     // Get the path for .env.* files. Such as production or test.
-    const envPath = env ? `${basePath}.${env.ENVIRONMENT}` : basePath;
-    // Check if the file exists, otherwise fall back to basePath.
-    const finalPath = fs.existsSync(envPath) ? envPath : basePath;
+    const envPath = env ? `${devEnvPath}.${env.ENVIRONMENT}` : devEnvPath;
+    // Check if the file exists, otherwise fall back to devEnvPath.
+    const finalPath = fs.existsSync(envPath) ? envPath : devEnvPath;
 
     if (fs.existsSync(finalPath)) {
         const appEnv = dotEnv.config({ path: finalPath }).parsed;
