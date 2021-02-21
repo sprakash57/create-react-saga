@@ -8,12 +8,9 @@ describe('<App />', () => {
           id: 1,
           name: 'john',
           email: 'johndoe@mail.com',
-          address: {
-            street: 'lorem',
-            city: 'ipsum',
-          },
-          phone: '777-777',
-        },
+          city: 'ipsum',
+          phone: '777-777'
+        }
       ],
       loading: false,
       message: '',

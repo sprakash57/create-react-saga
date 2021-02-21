@@ -13,7 +13,7 @@ module.exports = (env) => {
             favicon: './assets/favicon.ico'
         })
     ]
-    // Path of the env file for development. Usually at the root level.
+    // Path of the env file for development. Usually at the root level of your project.
     const devEnvPath = `${path.join(__dirname)}/.env`;
     // Get the path for .env.* files. Such as production or test.
     const envPath = env ? `${devEnvPath}.${env.ENVIRONMENT}` : devEnvPath;
@@ -22,7 +22,6 @@ module.exports = (env) => {
 
     if (fs.existsSync(finalPath)) {
         const appEnv = dotEnv.config({ path: finalPath }).parsed;
-
         const envKeys = Object.keys(appEnv).reduce((formattedKeys, currentKey) => {
             formattedKeys[`process.env.${currentKey}`] = JSON.stringify(appEnv[currentKey]);
             return formattedKeys;
@@ -36,8 +35,8 @@ module.exports = (env) => {
             rules: [
                 { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
                 { test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-                { test: /\.(png|jpe?g|gif|svg|ico)$/, loader: 'file-loader?name=assets/[name].[ext]' },
-                { test: /\.(eot|ttf|wof|wof2)$/, loader: 'file-loader?name=/assets/fonts/[name].[ext]' }
+                { test: /\.(png|jpe?g|gif|svg|ico)$/, use: [{ loader: 'file-loader?name=assets/[name].[ext]' }] },
+                { test: /\.(eot|ttf|wof|wof2)$/, use: [{ loader: 'file-loader?name=/assets/fonts/[name].[ext]' }] }
             ]
         },
         resolve: {

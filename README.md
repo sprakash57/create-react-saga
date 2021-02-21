@@ -14,7 +14,7 @@ Application will hot reload if you make any changes.
 
 ### `npm test`
 
-Runs all the test cases. Behind the scene create-react-saga uses [jest](https://jestjs.io) and [enzyme](https://enzymejs.github.io/enzyme).
+Runs all the test cases. Behind the scene create-react-saga uses [jest](https://jestjs.io) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
 
 ### `npm build`
 
@@ -28,4 +28,4 @@ You can view the stories in the browser at http://localhost:6006 after running s
 
 ## Learn More
 
-Documentation will be live soon...
+Want to learn more?! See the [Documentation](http://sprakash57.github.io/create-react-saga) in action.
