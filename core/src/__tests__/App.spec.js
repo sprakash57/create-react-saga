@@ -8,7 +8,10 @@ describe('<App />', () => {
           id: 1,
           name: 'john',
           email: 'johndoe@mail.com',
-          city: 'ipsum',
+          address: {
+            city: 'Wisokyburgh',
+            street: 'Victor Plains'
+          },
           phone: '777-777'
         }
       ],
@@ -17,27 +20,25 @@ describe('<App />', () => {
     },
     fetchUsers: jest.fn()
   }
-  const getComponent = (props) => render(<App {...props} />);
 
   afterEach(() => {
     cleanup();
   })
 
   it('Should render main container', () => {
-    const { container } = getComponent(data);
+    const { container } = render(<App {...data} />);
     expect(container.querySelector(".t-center")).toBeTruthy();
   });
 
   it('Should render <Button /> component', () => {
-    const { getByTestId } = getComponent(data);
+    const { getByTestId } = render(<App {...data} />);
     expect(getByTestId("succss-btn")).toBeTruthy();
   });
 
   it('Should display `Loading...` if API call is pending', () => {
     const newState = { ...data.state, loading: true }
     const props = { ...data, state: newState }
-    const { getByText } = getComponent(props);
+    const { getByText } = render(<App {...props} />);
     expect(getByText('Loading...')).toBeTruthy();
   });
-
 });
