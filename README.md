@@ -8,7 +8,7 @@
 Then you have come to the right place. You will get most vanilla React experience ever without worrying about configuring component creation in isolation, unit testing and api integration. See the features section for detailed info.
 
 ## Features
-- Lean and easy to understand webpack configurations for production and development environment.
+- Lean and easy to understand Webpack configurations for production and development environment.
 - Built-in Scss support. No need to sweat any more over modern CSS.
 - Unit test utilities and example included for starter kit code to get you up to speed without wasting any time.
 - Functional component has been used in the entire place. No more old `class`.
@@ -54,14 +54,14 @@ my-first-project
 ├── assets
 │   ├── favicon.ico
 │   └── wrs.png
-└── app
+└── src
     ├── __mocks__
     ├── __tests__
     ├── actions
     ├── common
     ├── components
     ├── libs
-    └── reducers
+    ├── reducers
     ├── sagas
     ├── App.js
     ├── constants.js
@@ -74,13 +74,13 @@ my-first-project
 
 Before you start developing your awesome app, you should be aware of tech and tools comes with Create React Saga. So that you can quickly start implementing your business logic without wasting any moment in configuration and installation of npm libraries. Below packages, you get out of the box.
 
-- **React hooks**
+- **React v17+**
 - **Redux-Saga**
 - **ES6+**
 - **Sass**
-- **Webpack**
+- **Webpack v5**
 - **Jest**
-- **Enzyme**
+- **React Testing Library**
 - **Storybook.js**
 - **Babel**
 

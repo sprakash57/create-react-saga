@@ -4,5 +4,6 @@
 * [Assets & Styling](styling.md)
 * [Testing](testing.md)
 * [API integration](api.md)
+* [Recipes](recipes.md)
 * [Showcase](showcase.md)
-* [Suppport](support.md)
+* [Support](support.md)

@@ -1,6 +1,6 @@
 ## Webpack
-
-Webpack is a static module bundler for Create React Saga. It internally processes your app and builds a dependency graph which maps every module your project needs and generate one or more bundles. Well this is what webpack documentation says. In simpler terms whatever build files you are going to create is done via webpack configuration. We will see some important sections used in the CLI.
+ 
+**Say Hi! to Webpack v5**. The latest version of Webpack is being used as static module bundler for Create React Saga. It internally processes your app and builds a dependency graph which maps every module your project needs and generate one or more bundles. Well this is what webpack documentation says. In simpler terms whatever build files you are going to create is done via webpack configuration. We will see some important sections used in the CLI.
 
 Once you execute the CLI it will generate three webpack files in the root directory namely - `webpack.common.js`, `webpack.dev.js` and `webpack.prod.js`. As the name suggests first one contains all the common configuration between development and production environment. Later ones contain rules specific to the environment. Configuration is nothing but an exported object with some special attributes that you need to take care of. Below are the some important ones -
 
@@ -22,10 +22,10 @@ Plugins are used to perform a wider range of tasks like bundle optimization, ass
 6. **devtool** - 
 If you want to debug your application in the browser through dev tools. you have to keep this option as `inline-source-map` otherwise you can just ignore the field or keep it as `hidden-source-map`.
 
-> This is just a glimpse of what you can configure and customize in your Create React Saga with the help of webpack. To know more about webpack and how to cinfigure it please visit their <a href="https://v4.webpack.js.org/concepts/" target="_blank">docs</a>. Currently `create-react-saga` is using wepack v4. Migration to v5 is under development. It will be live soon.
+> This is just a glimpse of what you can configure and customize in your Create React Saga with the help of webpack. To know more about webpack and how to cinfigure it please visit their <a href="https://webpack.js.org/concepts/" target="_blank">docs</a>.
 
 ## Babel
-Babel is included to let user use the latest features of EcmaScript and intorduce polyfils to run the application on various browsers. In the root directory you will find `.babelrc` file that contains bable presets and plugins. babel preset is collection of plugins for behaving cohesively. For example `@babel/preset-react` contains below plugins -
+Babel is included in case you want to use the latest features of EcmaScript and intorduce polyfils to run the application on various browsers. In the root directory you will find `.babelrc` file that contains bable presets and plugins. babel preset is collection of plugins for behaving cohesively. For example `@babel/preset-react` contains below plugins -
 - @babel/plugin-syntax-jsx
 - @babel/plugin-transform-react-jsx
 - @babel/plugin-transform-react-display-name
