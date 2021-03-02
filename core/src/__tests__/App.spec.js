@@ -1,4 +1,3 @@
-import { cleanup } from '@testing-library/react';
 import { App } from '../App';
 
 describe('<App />', () => {
@@ -9,12 +8,9 @@ describe('<App />', () => {
           id: 1,
           name: 'john',
           email: 'johndoe@mail.com',
-          address: {
-            street: 'lorem',
-            city: 'ipsum',
-          },
-          phone: '777-777',
-        },
+          city: 'ipsum',
+          phone: '777-777'
+        }
       ],
       loading: false,
       message: '',
@@ -26,11 +22,6 @@ describe('<App />', () => {
   afterEach(() => {
     cleanup();
   })
-
-  it('Should snapshots match', () => {
-    const mounted = <App state={initialState} fetchUsers={mockFetchUsers} />;
-    expect(toJson(mounted)).toMatchSnapshot();
-  });
 
   it('Should render main container', () => {
     const { container } = getComponent(data);
