@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function User({ user }) {
-    const { name, email, address: { street, city }, phone } = user;
+    const { name, email, address: { city, street }, phone } = user;
     return (
         <section className="user">
             <p>Name: {name}</p>
