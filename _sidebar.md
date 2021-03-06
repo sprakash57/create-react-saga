@@ -5,5 +5,5 @@
 * [Testing](testing.md)
 * [API integration](api.md)
 * [Recipes](recipes.md)
-* [Showcase](showcase.md)
+* [Deployment](deployment.md)
 * [Support](support.md)
