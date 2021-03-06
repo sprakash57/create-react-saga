@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="blank"><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/core/assets/wrs.png" width="320" alt="WRSa logo" /></a>
+  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="_blank"><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/core/assets/wrs.png" width="320" alt="WRSa logo" /></a>
 </p>
 
 <h1 align="center">Create React Saga</h1>
@@ -18,26 +18,25 @@ Then you have come to the right place. You will get the most vanilla React exper
 You can find the live demo of the running boilerplate over [here](https://live.d3knmnietsgia5.amplifyapp.com/)
 
 ## 🚀 Features
-- Lean and easy to understand webpack configurations for production and development environment.
-- Built-in Scss support. No need to sweat anymore over modern CSS.
-- Unit test utilities and example included for starter kit code to get you up to speed without wasting any time.
-- Functional component has been used in the entire place. No more old `class`.
+- Written in React 17 with hooks and functional components. Easy to clean bootstrapped codebase with minimal number of dependencies.
+- Latest and greatest **Webpack 5**. Configurations included for production and development environments.
+- Environment variables support for your secrets.
+- <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library </a> configured for unit testing with example test cases.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
 - Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [JSON placeholder](https://jsonplaceholder.typicode.com/) for their open source API.
 - Constant maintenance and package updates.
-- Optimized bundle size for production.
-- Redux devtool integration with trace enabled. Download [redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extenstion to track saga calls.
-- Storybook.js to showcase your componet ahead of feature development.
+- Redux devtool integration with trace enabled. Download [redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extension to track saga calls.
+- Storybook.js to showcase your component ahead of feature development.
 
 ## 💻 Technology Stack
 
-- **React hooks**
+- **React 17**
 - **Redux-Saga**
 - **ES6+**
-- **Sass**
-- **Webpack**
+- **Sass** (Limited to application)
+- **Webpack 5**
 - **Jest**
-- **Enzyme**
+- **React Testing Library**
 - **Storybook.js**
 - **Babel**
 
@@ -77,14 +76,14 @@ my-first-project
 ├── assets
 │   ├── favicon.ico
 │   └── wrs.png
-└── app
+└── src
     ├── __mocks__
     ├── __tests__
     ├── actions
     ├── common
     ├── components
     ├── libs
-    └── reducers
+    ├── reducers
     ├── sagas
     ├── App.js
     ├── constants.js
@@ -109,4 +108,4 @@ Open [localhost:6006](http://localhost:6006) in the Browser.
 
 ## 📑 License
 
-Create React Saga is open source software [licensed as MIT](https://github.com/sprakash57/create-react-saga/blob/master/LICENSE). The logo is licensed  under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+Create React Saga is open source software [licensed as MIT](https://github.com/sprakash57/create-react-saga/blob/master/LICENSE). The logo is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
