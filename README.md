@@ -33,7 +33,7 @@ $ npm start
 ```
 Open <u>http://localhost:3000</u> to see the app running.
 
-> npm 5.2+ version is required for npx to work.
+!> npm 5.2+ version is required for npx to work.
 
 ## Project structure
 Running `npx create-react-saga my-first-project --git` will create below project structure -

@@ -35,4 +35,4 @@ export const Button = ({ variant, label, ...props }) => {
 };
 ```
 
-!! Currently, SCSS support is limited to application. If you opt to use storybook in your project, then you will have to stick with `css` for stories. Read more about the <a href="https://github.com/sprakash57/create-react-saga/issues/17" target="_blank">issue</a>
+!> Currently, SCSS support is limited to application. If you opt to use storybook in your project, then you will have to stick with `css` for stories. Read more about the <a href="https://github.com/sprakash57/create-react-saga/issues/17" target="_blank">issue.</a>
