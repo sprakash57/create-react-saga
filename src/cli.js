@@ -2,8 +2,10 @@ import arg from 'arg';
 import inquirer from 'inquirer';
 import fs from 'fs';
 import path from 'path';
-import { helpMsg } from './libs.js';
+import { helpMsg, TEMPLATES, wrongTemplateMsg } from './libs.js';
 import { createProject } from './main.js';
+
+let alertWrongTemplate = false;
 
 const parseArgs = (inputArgs) => {
     const args = arg(
@@ -23,32 +25,17 @@ const parseArgs = (inputArgs) => {
     );
     return {
         directory: args._[0],
+        template: args._[1] || TEMPLATES['js'],
         git: args["--git"] || false,
         help: args["--help"] || false,
         version: args["--version"] || false,
-        template: args._[1],
         skip: args["--default"] || false
     }
 };
 
 const alertMissingOptions = async (options) => {
     const queries = [];
-    const JS = 'JavaScript';
-    if (options.skip) {
-        return {
-            ...options,
-            template: options.template || JS
-        }
-    }
-    if (!options.template) {
-        queries.push({
-            type: 'list',
-            name: 'template',
-            message: 'Please choose a template to use: ',
-            choices: ['JavaScript', 'TypeScript'],
-            default: JS
-        })
-    }
+
     if (!options.directory) {
         queries.push({
             type: "input",
@@ -64,6 +51,24 @@ const alertMissingOptions = async (options) => {
             }
         })
     }
+
+    if (options.skip) {
+        return {
+            ...options,
+            template: options.template || TEMPLATES['js']
+        }
+    }
+
+    if (!options.template) {
+        queries.push({
+            type: "list",
+            name: "template",
+            message: "Please choose a template to use: ",
+            choices: ["JavaScript", "TypeScript"],
+            default: TEMPLATES['js']
+        })
+    }
+
     if (!options.git) {
         queries.push({
             type: "confirm",
@@ -72,16 +77,24 @@ const alertMissingOptions = async (options) => {
             default: false
         })
     }
+
     const answers = await inquirer.prompt(queries);
+
+    let inputTemplate = TEMPLATES['js'];
+    if (TEMPLATES[answers.template]) inputTemplate = TEMPLATES[answers.template];
+    else alertWrongTemplate = true;
+
     return {
         ...options,
         directory: options.directory || answers.directory,
+        template: inputTemplate || answers.template,
         git: options.git || answers.git
     };
 }
 
 export const cli = async (args) => {
     let options = parseArgs(args);
+    console.log(options);
     if (options.help) {
         console.log(helpMsg);
     } else if (options.version) {
@@ -90,6 +103,8 @@ export const cli = async (args) => {
         console.log(`Installed create-react-saga CLI version is v${packageJson.version}`);
     } else {
         options = await alertMissingOptions(options);
-        await createProject(options);
+        if (alertWrongTemplate) console.log(wrongTemplateMsg);
+        console.log('options--->', options);
+        // await createProject(options);
     }
 }
