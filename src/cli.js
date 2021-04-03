@@ -13,7 +13,9 @@ const parseArgs = (inputArgs) => {
             "--help": Boolean,
             "-h": "--help",
             "--version": Boolean,
-            "-v": "--version"
+            "-v": "--version",
+            "--default": Boolean,
+            "-d": "--default"
         },
         {
             argv: inputArgs.slice(2)
@@ -23,12 +25,30 @@ const parseArgs = (inputArgs) => {
         directory: args._[0],
         git: args["--git"] || false,
         help: args["--help"] || false,
-        version: args["--version"] || false
+        version: args["--version"] || false,
+        template: args._[1],
+        skip: args["--default"] || false
     }
 };
 
 const alertMissingOptions = async (options) => {
     const queries = [];
+    const JS = 'JavaScript';
+    if (options.skip) {
+        return {
+            ...options,
+            template: options.template || JS
+        }
+    }
+    if (!options.template) {
+        queries.push({
+            type: 'list',
+            name: 'template',
+            message: 'Please choose a template to use: ',
+            choices: ['JavaScript', 'TypeScript'],
+            default: JS
+        })
+    }
     if (!options.directory) {
         queries.push({
             type: "input",

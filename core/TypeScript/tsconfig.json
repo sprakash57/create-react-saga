@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "ESNext"
+        ],
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "jsx": "react",
+        "removeComments": true,
+        "sourceMap": true,
+        "target": "es5",
+        "strict": true,
+        "noImplicitAny": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules"
+    ],
+    "typeRoots": [
+        "node_modules/@types",
+        "src/types"
+    ]
+}
