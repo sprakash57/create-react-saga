@@ -1,11 +1,11 @@
 ## What is Create React Saga?
 
-`create-react-saga` is a CLI tool for quickly set up your next clutter free webpack backed React application. It provides you the latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
+`create-react-saga` is a CLI tool for quickly set up your next clutter-free webpack backed React application. It provides you the latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
 1. Create components ahead of development for early reviews.
 2. Want to use Redux-Saga middleware for async calls.
 3. Proper testing environment setup for React hooks.
 
-Then you have come to the right place. You will get the most vanilla React experience ever without worrying about configuring component creation in isolation, unit testing and api integration. See the features section for detailed info.
+Then you have come to the right place. You will get the most vanilla React experience ever without worrying about configuring component creation in isolation, unit testing and API integration. See the features section for detailed info.
 
 ## Features
 - Written in React 17 with hooks and functional components. Easy to clean bootstrapped codebase with minimal number of dependencies.
@@ -36,7 +36,7 @@ Open <u>http://localhost:3000</u> to see the app running.
 !> npm 5.2+ version is required for npx to work.
 
 ## Project structure
-Running `npx create-react-saga my-first-project --git` will create below project structure -
+Running `npx create-react-saga my-first-project` will create below project structure -
 
 ```
 my-first-project
@@ -78,7 +78,6 @@ Before you start developing your awesome app, you should be aware of tech and to
 - **Redux-Saga**
 - **Webpack v5**
 - **ES6+**
-- **Sass** (Limited to application)
 - **Jest**
 - **React Testing Library**
 - **Storybook.js**
@@ -89,12 +88,11 @@ Before you start developing your awesome app, you should be aware of tech and to
 ### npx create-react-saga --help
 It will show you all the available options comes with Create React Saga
 
-<p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
+<p><img src="https://i.ibb.co/WtWcdZf/help.png" alt="help" border="0"/></p>
 
-### npx create-react-saga --git
-Getting your starter kit comes with initialized git repo. You just need to provide the `--git` flag. If you want to skip the git initialization, don't include the flag, and you are good to go.
-
-### npm build
+### npm start
+This will launch your application in development environment.
+### npm run build
 Once you are done with your development, and now you want to build your app. This command does just that. Once you run the command, you will find a directory under the root folder named as `dist`. It will contain the bundles and `index.html` files ready to be deployed.
 
 ### npm test

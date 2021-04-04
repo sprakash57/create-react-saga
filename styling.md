@@ -1,17 +1,13 @@
-## Files, Images and Fonts
+## Assets
 
-Webpack helps you to import your files, images and fonts easily to your project. All you need to do is put your asset files inside `assets` folder. Currently, Create React Saga supports most common file types -
+Webpack helps you to import your files, images and fonts easily to your project. All you need to do is put your asset files inside `assets` folder. Currently, Create React Saga supports most common file types such media, assets, fonts and images.
 
-1. Files - .css, .scss, .js, .jsx
-2. Images - .png, .jpeg, .jpg, .gif, .svg, .ico
-3. Fonts - .eot, .ttf, .wof, .wof2
-
-But this is not the limitation. You can add the desired file type under rules in `webpack.common` file. Your code should look like below -
+You can add the desired file type under rules in `webpack.common` file. Your code should look like below -
 
 ```
 rules: [
     { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
-    { test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+    { test: /\.(css)$/, use: ['style-loader', 'css-loader'] },
     { test: /\.(png|jpe?g|gif|svg|ico)$/, use: [{ loader: 'file-loader?name=assets/[name].[ext]' }] },
     { test: /\.(eot|ttf|wof|wof2)$/, use: [{ loader: 'file-loader?name=/assets/fonts/[name].[ext]' }] }
 ]
@@ -21,10 +17,10 @@ If you are building your app and want your assets present in your `dist` folder.
 
 ## Styling your app
 
-Create React Saga comes with <a href="https://sass-lang.com/guide" target="_blank">SCSS</a> support. So that you can use mixins, nested properties, variables and a lot more, right from the start. You just need to import proper `.scss` file and all done. Webpack will take care of minifying all your stylesheets.
+It is as simple as adding stylesheets for your components or add a single global `.css`. Choice is yours. Below is and example how we generally import `css` files and use it inside components.
 
 ```
-import './button.scss';
+import './button.css';
 
 export const Button = ({ variant, label, ...props }) => {
   return (
@@ -35,4 +31,4 @@ export const Button = ({ variant, label, ...props }) => {
 };
 ```
 
-!> Currently, SCSS support is limited to application. If you opt to use storybook in your project, then you will have to stick with `css` for stories. Read more about the <a href="https://github.com/sprakash57/create-react-saga/issues/17" target="_blank">issue.</a>
+But that's not the limitation, you can add different UI component libraries and toolkit to enhance your designing experience. Such an example is present in [recipes](/recipes) where I have shown how to integrate everyone's favorite `Bootstrap`.
