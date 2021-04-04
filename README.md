@@ -6,7 +6,7 @@
 
 [![NPM](https://img.shields.io/npm/v/create-react-saga.svg)](https://www.npmjs.com/package/create-react-saga)
 
-`create-react-saga` is a CLI tool for quickly setup your next clutter free webpack backed React application. It provides you the latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
+`create-react-saga` is a CLI tool for quickly setup your next clutter-free webpack backed React application. It provides you the latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
 1. Create components ahead of development for early reviews.
 2. Want to use Redux-Saga middleware for async calls.
 3. Proper testing environment setup for React hooks.
@@ -15,7 +15,7 @@ Then you have come to the right place. You will get the most vanilla React exper
 
 ## 📺 Demo
 
-You can find the live demo of the running boilerplate over [here](https://live.d3knmnietsgia5.amplifyapp.com/)
+You can find the live demo of the running boilerplate over <a href="https://live.d3knmnietsgia5.amplifyapp.com/" target="_blank">here</a>
 
 ## 🚀 Features
 - Written in React 17 with hooks and functional components. Easy to clean bootstrapped codebase with minimal number of dependencies.
@@ -24,16 +24,15 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 - JavaScript and TypeScript templates.
 - <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library </a> configured for unit testing with example test cases.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
-- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [JSON placeholder](https://jsonplaceholder.typicode.com/) for their open source API.
+- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSON placeholder</a> for their open source API.
 - Constant maintenance and package updates.
-- Redux devtool integration with trace enabled. Download [redux-devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) extension to track saga calls.
+- Redux devtool integration with trace enabled. Download browser extension to track saga calls. For example for Google Chrome you can find it over <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd" target="_blank">here</a>.
 - Storybook.js to showcase your component ahead of feature development.
 
 ## 💻 Technology Stack
 
 - **React 17**
 - **Redux-Saga**
-- **React Router**
 - **ES6+**
 - **Webpack 5**
 - **Jest**
@@ -46,7 +45,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 
 <p><img src="https://i.ibb.co/WtWcdZf/help.png" alt="help" border="0"/></p>
 
-> Detailed version of the documentation can be found over [here](https://sprakash57.github.io/create-react-saga)
+> Detailed version of the documentation can be found over <a href="https://sprakash57.github.io/create-react-saga" target="_blank">here</a>
 
 ## 🤔 How to use?
 ```
