@@ -6,7 +6,7 @@ import execa from 'execa';
 import Listr from 'listr';
 import { projectInstall } from 'pkg-install';
 import boxen from 'boxen';
-import { getPath } from './libs';
+import { availableCommands, getPath } from './libs';
 
 const copy = promisify(ncp);
 const successBox = {
@@ -17,7 +17,7 @@ const successBox = {
 }
 
 const copyCoreFiles = async (options) => {
-    const packageJsonPath = getPath(['../core', 'package.json']);
+    const packageJsonPath = getPath([`../core/${options.template}`, 'package.json']);
     const raw = fs.readFileSync(packageJsonPath);
     const packageJson = JSON.parse(raw);
     packageJson.name = options.directory;
@@ -37,42 +37,31 @@ const initGit = async (options) => {
 }
 
 export const createProject = async (options) => {
-    const source = getPath(['../core']);
+    const source = getPath([`../core/${options.template}`]);
     const target = options.directory === "." ? process.cwd() : `${process.cwd()}\\${options.directory}`;
-    options = {
-        ...options,
-        source,
-        target
-    };
+    const newOptions = { ...options, source, target };
 
     const tasks = new Listr([
         {
             title: 'Generating starter code...',
-            task: () => copyCoreFiles(options),
+            task: () => copyCoreFiles(newOptions),
         },
         {
             title: 'Initializing git...',
-            task: () => initGit(options),
-            enabled: () => options.git
+            task: () => initGit(newOptions),
+            skip: () => {
+                if (!newOptions.git) return 'Skipping git initialization'
+            }
         },
         {
             title: 'Installing dependencies. It will take few minutes. Please do not cancel the installation.',
-            task: () => projectInstall({ cwd: options.target, verbose: true })
+            task: () => projectInstall({ cwd: newOptions.target, verbose: true })
         },
     ]);
 
     await tasks.run();
     console.log("%s: Project is ready.", chalk.green.bold("DONE"));
-    console.log(`
-
-    You can try below commands in your root directory -
-
-    1. ${chalk.green("npm start")} --> To run project locally at ${chalk.yellow.underline("http://localhost:3000")}.
-
-    2. ${chalk.green("npm build")} --> Create production build to ${chalk.yellow("dist")} folder.
-
-    3. ${chalk.green("npm test")} --> Run all the test cases.
-    `);
+    console.log(availableCommands);
     console.log(boxen(chalk.green(`Happy Coding with ${options.directory}!!`), successBox));
     return true;
 };
