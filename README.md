@@ -33,7 +33,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 
 - **React 17**
 - **Redux-Saga**
-- **Routes**
+- **React Router**
 - **ES6+**
 - **Webpack 5**
 - **Jest**
@@ -44,7 +44,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 ## 📙 Documentation
 `npx create-react-saga --help` will show you all available options.
 
-<p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
+<p><img src="https://i.ibb.co/WtWcdZf/help.png" alt="help" border="0"/></p>
 
 > Detailed version of the documentation can be found over [here](https://sprakash57.github.io/create-react-saga)
 
