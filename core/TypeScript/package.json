@@ -1,7 +1,7 @@
 {
   "name": "new-app",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "jest",
     "test-cov": "jest --coverage",
