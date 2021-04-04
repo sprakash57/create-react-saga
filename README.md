@@ -21,6 +21,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 - Written in React 17 with hooks and functional components. Easy to clean bootstrapped codebase with minimal number of dependencies.
 - Latest and greatest **Webpack 5**. Configurations included for production and development environments.
 - Environment variables support for your secrets.
+- JavaScript and TypeScript templates.
 - <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library </a> configured for unit testing with example test cases.
 - `.babelrc` file provided in case you want to use latest ES6+ features.
 - Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to [JSON placeholder](https://jsonplaceholder.typicode.com/) for their open source API.
@@ -32,8 +33,8 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 
 - **React 17**
 - **Redux-Saga**
+- **React Router**
 - **ES6+**
-- **Sass** (Limited to application)
 - **Webpack 5**
 - **Jest**
 - **React Testing Library**
@@ -43,7 +44,7 @@ You can find the live demo of the running boilerplate over [here](https://live.d
 ## 📙 Documentation
 `npx create-react-saga --help` will show you all available options.
 
-<p><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/images/help.png" alt="help"/></p>
+<p><img src="https://i.ibb.co/WtWcdZf/help.png" alt="help" border="0"/></p>
 
 > Detailed version of the documentation can be found over [here](https://sprakash57.github.io/create-react-saga)
 
