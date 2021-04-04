@@ -5,7 +5,7 @@ import path from 'path';
 import { helpMsg, TEMPLATES, wrongTemplateMsg } from './libs.js';
 import { createProject } from './main.js';
 
-let alertWrongTemplate = false;
+let isWrongTemplate = false;
 
 const parseArgs = (inputArgs) => {
     const args = arg(
@@ -25,7 +25,7 @@ const parseArgs = (inputArgs) => {
     );
     return {
         directory: args._[0],
-        template: args._[1] || TEMPLATES['js'],
+        template: args._[1],
         git: args["--git"] || false,
         help: args["--help"] || false,
         version: args["--version"] || false,
@@ -55,10 +55,11 @@ const alertMissingOptions = async (options) => {
     if (options.skip) {
         return {
             ...options,
-            template: options.template || TEMPLATES['js']
+            template: TEMPLATES[options.template] || TEMPLATES['js']
         }
     }
 
+    let inputTemplate = TEMPLATES['js'];
     if (!options.template) {
         queries.push({
             type: "list",
@@ -67,6 +68,9 @@ const alertMissingOptions = async (options) => {
             choices: ["JavaScript", "TypeScript"],
             default: TEMPLATES['js']
         })
+    } else {
+        if (TEMPLATES[options.template]) inputTemplate = TEMPLATES[options.template];
+        else isWrongTemplate = true;
     }
 
     if (!options.git) {
@@ -79,32 +83,27 @@ const alertMissingOptions = async (options) => {
     }
 
     const answers = await inquirer.prompt(queries);
-
-    let inputTemplate = TEMPLATES['js'];
-    if (TEMPLATES[answers.template]) inputTemplate = TEMPLATES[answers.template];
-    else alertWrongTemplate = true;
+    if (answers.template) inputTemplate = answers.template;
 
     return {
         ...options,
         directory: options.directory || answers.directory,
-        template: inputTemplate || answers.template,
+        template: inputTemplate,
         git: options.git || answers.git
     };
 }
 
 export const cli = async (args) => {
     let options = parseArgs(args);
-    console.log(options);
     if (options.help) {
         console.log(helpMsg);
     } else if (options.version) {
         let packageJson = path.resolve(path.dirname(__filename), '../package.json');
         packageJson = JSON.parse(fs.readFileSync(packageJson));
-        console.log(`Installed create-react-saga CLI version is v${packageJson.version}`);
+        console.log(`create-react-saga v${packageJson.version}`);
     } else {
         options = await alertMissingOptions(options);
-        if (alertWrongTemplate) console.log(wrongTemplateMsg);
-        console.log('options--->', options);
-        // await createProject(options);
+        if (isWrongTemplate) console.log(wrongTemplateMsg);
+        await createProject(options);
     }
 }

@@ -18,6 +18,10 @@ export const helpMsg = `
         ${chalk.yellow("--help, -h")}         To list down all the available options.
 
         ${chalk.yellow("--version, -v")}      Display the version of create-react-saga CLI.
+
+        ${chalk.yellow("--default, -d")}      Skip all the checks and select default behavior.
+                            - Template: JavaScript
+                            - git: NA
 `
 
 /**
@@ -34,4 +38,14 @@ export const TEMPLATES = {
 export const wrongTemplateMsg = `
 🟡 Provided template is invalid. create-react-saga only supports${chalk.green('js')} or ${chalk.green('ts')}.
 🟢 Proceeding with default${chalk.green('js')}.
+`;
+
+export const availableCommands = `
+    You can try below commands in your root directory -
+
+    1. ${chalk.green("npm start")} --> To run project locally at ${chalk.yellow.underline("http://localhost:3000")}.
+
+    2. ${chalk.green("npm build")} --> Create production build to ${chalk.yellow("dist")} folder.
+
+    3. ${chalk.green("npm test")} --> Run all the test cases.
 `;
