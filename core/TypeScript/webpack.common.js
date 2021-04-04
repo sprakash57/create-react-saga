@@ -34,13 +34,13 @@ module.exports = (env) => {
         module: {
             rules: [
                 { test: /\.(js|ts)x?$/, use: 'babel-loader', exclude: /node_modules/ },
-                { test: /\.(css|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+                { test: /\.(css)$/, use: ['style-loader', 'css-loader'] },
                 { test: /\.(png|jpe?g|gif|svg|ico)$/, use: [{ loader: 'file-loader?name=assets/imgs/[name].[ext]' }] },
                 { test: /\.(eot|ttf|wof|wof2)$/, use: [{ loader: 'file-loader?name=/assets/fonts/[name].[ext]' }] }
             ]
         },
         resolve: {
-            extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+            extensions: ['.js', '.json', '.ts', '.tsx']
         },
         output: {
             path: path.resolve(__dirname, 'dist'),

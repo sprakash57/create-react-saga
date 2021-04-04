@@ -7,7 +7,7 @@ import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly'
 import App from './App';
 import reducer from './reducers';
 import rootSaga from './sagas';
-import './index.scss'
+import './index.css'
 
 const sagaMiddleware = createSagaMiddleware();
 

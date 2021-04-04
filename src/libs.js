@@ -4,10 +4,16 @@ import chalk from 'chalk';
 export const helpMsg = `
     1. How to use?
 
-        create-react-saga <project-name> ${chalk.yellow("[options]")}
-        - You can use (.) operator instead of ${chalk.blue("<project-name>")}. It will copy starter file to the current directory.
+        create-react-saga <project-name> <template> ${chalk.yellow("[options]")}
+    
+    2. I have already created my project directory. What now?
+        cd into your create directory and use below command
 
-    2. What options are available?
+            create-react-saga .
+
+        It will copy everything to your current directory.
+
+    3. What options are available?
 
         ${chalk.yellow("[Project name]*")}    Your project name.
 
