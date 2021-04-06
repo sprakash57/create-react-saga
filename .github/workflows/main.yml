@@ -25,9 +25,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Copy template files
+    - name: List direcory
       run: |
-        npx create-react-saga . -d
+        ls
     - name: Staging Build
       run: |
         npm run build
