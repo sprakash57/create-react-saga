@@ -28,6 +28,9 @@ jobs:
     - name: Search for build directory
       run: |
         cd core/JavaScript/
+    - name: List directory
+      run: |
+        ls
     - name: NPM Install
       run: |
         npm i
