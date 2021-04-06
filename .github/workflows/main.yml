@@ -25,9 +25,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: List direcory
+    - name: Search for build directory
       run: |
-        ls
+        cd core/JavaScript/
+    - name: NPM Install
+      run: |
+        npm i
     - name: Staging Build
       run: |
         npm run build
