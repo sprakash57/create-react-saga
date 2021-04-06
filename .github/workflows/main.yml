@@ -35,9 +35,6 @@ jobs:
         cd core/JavaScript/
         ls
         npm run build
-    - name: Unit tests
-      run: |
-        npm test
     - name: Deploy to S3 bucket
       uses: jakejarvis/s3-sync-action@master
       with:
