@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v1
@@ -25,12 +25,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Copy template
+    - name: Copy template files
       run: |
-        npx create-react-saga demoapp -d
-    - name: Go to App directory
-      run: |
-        cd demoapp
+        npx create-react-saga . -d
     - name: Staging Build
       run: |
         npm run build
