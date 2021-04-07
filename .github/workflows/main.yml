@@ -30,10 +30,6 @@ jobs:
         npm link
         create-react-saga app -d
         ls
-    - name: Staging Build
-      run: |
-        ls
-        cd app/
         npm run build
     - name: Deploy to S3 bucket
       uses: jakejarvis/s3-sync-action@master
