@@ -27,13 +27,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: NPM Install
       run: |
-        mkdir demoapp
         npm link
-        cd demoapp/
-        create-react-saga . -d
+        create-react-saga app -d
     - name: Staging Build
       run: |
-        cd demoapp/
+        cd app/
         npm run build
     - name: Deploy to S3 bucket
       uses: jakejarvis/s3-sync-action@master
@@ -44,7 +42,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID}}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
-        SOURCE_DIR: "demoapp/dist"
+        SOURCE_DIR: "app/dist"
         DEST_DIR: "js"
     
     
