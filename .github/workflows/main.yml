@@ -28,12 +28,9 @@ jobs:
     - name: NPM Install
       run: |
         npm link
-        npm list -g --depth 0
         create-react-saga app -d
-        pwd
         cd ~
-        ls
-        npm run build
+        ls -R
     - name: Deploy to S3 bucket
       uses: jakejarvis/s3-sync-action@master
       with:
