@@ -20,7 +20,7 @@ const copyCoreFiles = async (options) => {
     const packageJsonPath = getPath([`../core/${options.template}`, 'package.json']);
     const raw = fs.readFileSync(packageJsonPath);
     const packageJson = JSON.parse(raw);
-    packageJson.name = options.directory;
+    packageJson.name = options.directory === "." ? "my-crs-app" : options.directory;
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     const { source, target } = options;
     return copy(source, target, { clobber: false });

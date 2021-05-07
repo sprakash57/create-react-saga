@@ -10,15 +10,15 @@ export const helpMsg = `
 
         cd into your created directory and run below command
 
-        💲 npx create-react-saga .
+        💲 npx create-react-saga . <options>
 
         It will copy everything to your current directory.
 
     🎈 What options are available?
 
-        ${chalk.yellow("[Project name]*")}    Your project name.
+        ${chalk.yellow("<project-name>*")}    Your project name. It is mandatory.
 
-        ${chalk.yellow("[Template]")}         Can be JavaScript or TypeScript.
+        ${chalk.yellow("<template>")}         Can be JavaScript or TypeScript.
     
         ${chalk.yellow("--git, -g")}          Initialize git or not. Default is false.
  
@@ -44,7 +44,7 @@ export const TEMPLATES = {
 
 export const wrongTemplateMsg = `
 🟡 Provided template is invalid. create-react-saga only supports${chalk.green('js')} or ${chalk.green('ts')}.
-🟢 Proceeding with default${chalk.green('js')}.
+🟢 Proceeding with default template${chalk.green('js')}.
 `;
 
 export const availableCommands = `
