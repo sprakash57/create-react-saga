@@ -1,3 +1,5 @@
+## JS-Template for create-react-saga
+
 This repository is bootstrapped with <a href="https://github.com/sprakash57/create-react-saga" target="_blank" rel="noopener noreferrer">Create React Saga</a>.
 
 ## Scripts provided
