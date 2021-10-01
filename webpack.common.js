@@ -40,6 +40,11 @@ module.exports = (env) => {
             ]
         },
         resolve: {
+            alias: {
+                components: path.resolve(__dirname, 'src/components'),
+                reducers: path.resolve(__dirname, 'src/reducers'),
+                assets: path.resolve(__dirname, 'assets')
+            },
             extensions: ['.js', '.json', '.ts', '.tsx']
         },
         output: {
