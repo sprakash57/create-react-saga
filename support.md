@@ -15,4 +15,4 @@ I would really appreciate if you file bugs or issues you find along the way. It 
 
 ### Feedback & Suggestions
 
-I would love to have your valuable feedback. You can send them through https://suprdev.netlify.app/contact.
+Do you have any feedback/idea/suggestion to improve create-react-saga? Post them <a href="https://github.com/sprakash57/create-react-saga/discussions" target="_blank" rel="noopener noreferrer">here on discussion</a>. Lets make it better together😁.
