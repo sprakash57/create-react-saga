@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": "src",
         "lib": [
             "dom",
             "dom.iterable",
@@ -19,7 +20,7 @@
         "noEmit": true
     },
     "include": [
-        "src/**/*"
+        "src"
     ],
     "exclude": [
         "dist",
