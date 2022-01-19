@@ -1,10 +1,9 @@
 const path = require('path');
+
 module.exports = {
-  "stories": [
-    "../src/components/**/*.stories.mdx",
-    "../src/components/**/*.stories.@(ts|tsx)"
-  ],
-  "addons": [
-    "@storybook/addon-essentials"
-  ]
-}
+  "stories": ["../src/components/**/*.stories.mdx", "../src/components/**/*.stories.@(ts|tsx)"],
+  "addons": ["@storybook/addon-essentials"],
+  core: {
+    builder: "webpack5"
+  }
+};
