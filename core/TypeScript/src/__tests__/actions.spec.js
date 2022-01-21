@@ -1,4 +1,4 @@
-import { fetchUsers, fetchUsersRejected, fetchUsersResolved } from '../actions';
+import { fetchUsers, fetchUsersRejected, fetchUsersResolved } from 'actions';
 import { FETCH_USERS, FETCH_USERS_REJECTED, FETCH_USERS_RESOLVED } from '../constants';
 
 describe('Test suite for all the actions', () => {

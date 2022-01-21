@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
-import { fetchUsers } from './actions';
-import User from './common/User';
-import Alert from './common/Alert';
-import wrs from '../assets/imgs/wrs.png';
-import { Button } from './components/Button';
+import { fetchUsers } from 'actions';
+import User from 'common/User';
+import Alert from 'common/Alert';
+import wrs from 'assets/imgs/wrs.png';
+import { Button } from 'components/Button';
 
 type Props = {
   state: UserState,
