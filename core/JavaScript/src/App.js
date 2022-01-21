@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchUsers } from './actions';
-import User from './common/User';
-import Alert from './common/Alert';
+import User from 'common/User';
+import Alert from 'common/Alert';
 import wrs from '../assets/wrs.png';
-import { Button } from './components/Button';
+import { Button } from 'components/Button';
 
 export const App = ({ state, fetchUsers }) => {
   const { users, loading, message } = state;
