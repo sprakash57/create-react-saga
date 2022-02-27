@@ -1,5 +1,7 @@
 <p align="center">
-  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="_blank"><img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/core/assets/wrs.png" width="320" alt="WRSa logo" /></a>
+  <a href="https://master.d3knmnietsgia5.amplifyapp.com" target="_blank">
+  <img src="https://cdn.jsdelivr.net/npm/create-react-saga@0.7.7/core/assets/wrs.png" width="320" alt="create-react-saga" />
+  </a>
 </p>
 
 <h1 align="center">Create React Saga</h1>
@@ -22,29 +24,27 @@ You can find the live demo of the running boilerplate over <a href="https://live
 ## 🚀 Features
 - Written in React 17 with hooks and functional components. Easy to clean bootstrapped codebase with minimal number of dependencies.
 - Latest and greatest **Webpack 5**. Configurations included for production and development environments.
-- Environment variables support for your secrets.
-- JavaScript and TypeScript templates.
-- <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library </a> configured for unit testing with example test cases.
-- `.babelrc` file provided in case you want to use latest ES6+ features.
-- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSON placeholder</a> for their open source API.
-- Constant maintenance and package updates.
+- Environment variables support to keep your secrets hidden.
+- JavaScript and TypeScript templates to choose from.
+- Less boilerplate code for state manamgement through `@reduxjs/toolkit` 💪.
+- Redux-Saga for async calls without polluting redux actions. Thanks to <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSON placeholder</a> for their open source API.
 - Redux devtool integration with trace enabled. Download browser extension to track saga calls. For example for Google Chrome you can find it over <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd" target="_blank">here</a>.
 - Storybook.js to showcase your component ahead of feature development.
+- <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library </a> configured for unit testing with example test cases.
 
 ## 💻 Technology Stack
 
 - **React 17**
+- **@reduxjs/toolkit**
 - **Redux-Saga**
 - **Webpack 5**
+- **Storybook.js**
 - **Jest**
 - **React Testing Library**
-- **Storybook.js**
-- **Babel**
 
 ## 📙 Documentation
 `npx create-react-saga --help` will show you all available options.
-
-<p><img src="https://i.ibb.co/WtWcdZf/help.png" alt="help" border="0"/></p>
+<p><img src="https://i.ibb.co/hF6VSDX/Screenshot-2022-02-27-221909.png" alt="help" border="0"/></p>
 
 > Detailed version of the documentation can be found over <a href="https://sprakash57.github.io/create-react-saga" target="_blank">here</a>
 
@@ -79,18 +79,15 @@ my-first-project
 │   └── wrs.png
 └── src
     ├── __mocks__
-    ├── __tests__
-    ├── actions
-    ├── common
     ├── components
-    ├── libs
-    ├── reducers
-    ├── sagas
-    ├── App.js
-    ├── constants.js
+    ├── utils
+    ├── store
+    ├── types
+    ├── hooks
+    ├── App.ts
     ├── index.html
-    ├── index.js
-    └── index.scss
+    ├── index.ts
+    └── index.css
 ```
 
 ## ✔ Production build
@@ -106,6 +103,23 @@ $ npm run storybook
 ```
 
 Open [localhost:6006](http://localhost:6006) in the Browser.
+
+## Donate
+
+Ecslate is an open-source project. I have initiated this as self-starter. But I thought, it would be really helpful to people like me to use the same tool 
+that I use on day to day basis. It takes lots of effort and hard work to add new features, provide support and maintain at the same time. Please consider donating if you think docsify is helpful to you or that my work is valuable. Your support will keep me motivated to keep ecslate alive. I would be happy if you can -
+
+Show ❤️ by starring this repo.
+
+<a href="https://www.buymeacoffee.com/sunnyprakash" target="_blank" rel="noreferrer noopener">
+    <img  src="https://cdn.buymeacoffee.com/buttons/default-red.png"  alt="Buy Me A Coffee"  height="30"  width="150">
+</a>
+
+<br>
+
+<a href="https://www.paypal.me/sprakash57" target="_blank" rel="noreferrer noopener">
+    <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Paypal" height="30">
+</a>
 
 ## 📑 License
 
