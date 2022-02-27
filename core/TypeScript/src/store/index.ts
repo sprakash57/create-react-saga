@@ -23,4 +23,4 @@ export type RootState = {
     }
 }
 
-export type AppDispatch = typeof store.dispatch
+export type AppDispatch = typeof store.dispatch;

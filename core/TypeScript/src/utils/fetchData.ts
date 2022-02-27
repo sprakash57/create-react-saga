@@ -12,7 +12,7 @@ const headers = {
 const fetchData = async ({ method, body } = { method: 'GET', body: '' }): Promise<User[]> => {
     const options: Options = { method, headers };
     if (method !== 'GET') options.body = body;
-    const response = await fetch('src/utils/mockData.json', options);
+    const response = await fetch('https://jsonplaceholder.typicode.com/users', options);
     return await response.json();
 }
 
