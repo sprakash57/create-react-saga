@@ -8,7 +8,7 @@
 > A CLI tool to bootstrap modern React application.
 
 - React 17 and Webpack 5
-- Built-in Redux-Saga
+- Redux-Saga with @reduxjs/toolkit
 - Storybook.js
 
 [Get Started](#what-is-create-react-saga)

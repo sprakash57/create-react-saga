@@ -56,7 +56,7 @@ That's All!! You are done configuring environment variables for production.
  
 ## TypeScript
 
-It's an open source language which builds on JavaScript. As per <a href="https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved" target="_blank">Stackoverflow survey 2020</a>, TypeScript is 2nd most loved programming language.
+It's an open source language which builds on JavaScript. As per <a href="https://insights.stackoverflow.com/survey/2021#most-loved-dreaded-and-wanted-language-want" target="_blank">Stackoverflow survey 2021</a>, TypeScript is 2nd most wanted technology.
 ### Setup
 
 As you can see how popular typescript is, In such a user should have the option to bootstrap their project based on TypeScript as well. Well `v0.9.5` onwards create-react-saga gives you that flexibility. All you need to do is run below command - 

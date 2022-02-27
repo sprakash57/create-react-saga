@@ -2,25 +2,24 @@
 
 `create-react-saga` is a CLI tool for quickly set up your next clutter-free webpack backed React application. It provides you the latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
 1. Create components ahead of development for early reviews.
-2. Want to use Redux-Saga middleware for async calls.
+2. Want to use state management but afraid of hooking redux with saga for async behaviors 🤯.
 3. Proper testing environment setup for React hooks.
 
 Then you have come to the right place. You will get the most vanilla React experience ever without worrying about configuring component creation in isolation, unit testing and API integration. See the features section for detailed info.
 
 ## Features
 - Written in React 17 with hooks and functional components. Easy to clean bootstrapped codebase with minimal number of dependencies.
-- Latest and greatest Webpack 5. Configurations included for production and development environments.
-- Environment variables support for your secrets.
-- React Testing Library configured for unit testing with example test cases.
-- `.babelrc` file provided in case you want to use latest ES6+ features.
-- Proper implementation of Redux-Saga for async calls without polluting redux actions. Thanks to <a href="https://jsonplaceholder.typicode.com" target="_blank">jsonplaceholder</a> for awesome APIs.
-- Constant maintenance and package updates.
-- Optimized bundle size for production.
-- Redux devtool integration with trace enabled. Download <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd" target="_blank">redux-devtools</a> extension to track saga calls.
+- Latest and greatest **Webpack 5**. Configurations included for production and development environments.
+- Environment variables support to keep your secrets hidden.
+- JavaScript and TypeScript templates to choose from.
+- Less boilerplate code for state manamgement through `@reduxjs/toolkit` 💪.
+- Redux-Saga for async calls without polluting redux actions. Thanks to <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSON placeholder</a> for their open source API.
+- Redux devtool integration with trace enabled. Download browser extension to track saga calls. For example for Google Chrome you can find it over <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd" target="_blank">here</a>.
 - Storybook.js to showcase your component ahead of feature development.
+- <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank">React Testing Library </a> configured for unit testing with example test cases.
 
 ## Prerequisites
-You should have node.js version 10+ installed on your local machine. Visit <a href="https://nodejs.org/en/download/" target="_blank">here</a> and download if you haven't done so. Run below command to check the installed version.
+You should have node.js version 12+ installed on your local machine. Visit <a href="https://nodejs.org/en/download/" target="_blank">here</a> and download if you haven't done so. Run below command to check the installed version.
 
 ```
 $ node -v
@@ -46,8 +45,8 @@ my-first-project
 ├── webpack.prod.js
 ├── .babelrc
 ├── setupTests.js
-├── README.md
 ├── jest.config.js
+├── README.md
 ├── node_modules
 ├── package.json
 ├── .gitignore
@@ -56,39 +55,35 @@ my-first-project
 │   └── wrs.png
 └── src
     ├── __mocks__
-    ├── __tests__
-    ├── actions
-    ├── common
     ├── components
-    ├── libs
-    ├── reducers
-    ├── sagas
-    ├── App.js
-    ├── constants.js
+    ├── utils
+    ├── store
+    ├── types
+    ├── hooks
+    ├── App.ts
     ├── index.html
-    ├── index.js
-    └── index.scss
+    ├── index.ts
+    └── index.css
 ```
 
 ## Libraries
 
 Before you start developing your awesome app, you should be aware of tech and tools comes with Create React Saga. So that you can quickly start implementing your business logic without wasting any moment in configuration and installation of npm libraries. Below packages, you get out of the box.
 
-- **React v17+**
+- **React 17**
+- **@reduxjs/toolkit**
 - **Redux-Saga**
-- **Webpack v5**
-- **ES6+**
+- **Webpack 5**
+- **Storybook.js**
 - **Jest**
 - **React Testing Library**
-- **Storybook.js**
-- **Babel**
 
 ## Scripts
 
 ### npx create-react-saga --help
 It will show you all the available options comes with Create React Saga
 
-<p><img src="https://i.ibb.co/WtWcdZf/help.png" alt="help" border="0"/></p>
+<p><img src="https://i.ibb.co/hF6VSDX/Screenshot-2022-02-27-221909.png" alt="help" border="0"/></p>
 
 ### npm start
 This will launch your application in development environment.
@@ -100,6 +95,25 @@ Create React Saga already has a prototype app built-in with proper unit test cas
 
 ### npm run storybook
 Stories can be found running on <u>http://localhost:6006</u> in the Browser. You can interact with your components without any hassle.
+
+
+## Donate
+
+Ecslate is an open-source project. I have initiated this as self-starter. But I thought, it would be really helpful to people like me to use the same tool 
+that I use on day to day basis. It takes lots of effort and hard work to add new features, provide support and maintain at the same time. Please consider donating if you think docsify is helpful to you or that my work is valuable. Your support will keep me motivated to keep ecslate alive. I would be happy if you can -
+
+Show ❤️ by starring this repo.
+
+<a href="https://www.buymeacoffee.com/sunnyprakash" target="_blank" rel="noreferrer noopener">
+    <img  src="https://cdn.buymeacoffee.com/buttons/default-red.png"  alt="Buy Me A Coffee"  height="30"  width="150">
+</a>
+
+<br>
+
+<a href="https://www.paypal.me/sprakash57" target="_blank" rel="noreferrer noopener">
+    <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" alt="Paypal" height="30">
+</a>
+
 ## License
 
 Create React Saga is open source software licensed under <a href="https://github.com/sprakash57/create-react-saga/blob/master/LICENSE" target="_blank">MIT</a>. The logo is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International license</a>.
