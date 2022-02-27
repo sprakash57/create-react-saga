@@ -1,17 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { fetchUsers } from './actions';
-import User from './common/User';
-import Alert from './common/Alert';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchUsers } from './store/users';
 import wrs from '../assets/wrs.png';
-import { Button } from './components/Button';
+import { Button, Alert, User } from './components';
 
-export const App = ({ state, fetchUsers }) => {
-  const { users, loading, message } = state;
+const App = () => {
+  const { users, isLoading, message } = useSelector(state => state.usersReducer);
+  const dispatch = useDispatch();
+
   const loadUsers = () => {
-    fetchUsers();
+    dispatch(fetchUsers());
   };
 
   const renderUser = () => {
@@ -28,22 +26,15 @@ export const App = ({ state, fetchUsers }) => {
   return (
     <main className="t-center">
       <img src={wrs} className="logo" alt="webpackLogo" />
-      <h1 className="t-header">Click <Button label="Fetch" variant="success" onClick={loadUsers} data-testid="succss-btn" /> & let Saga do the rest.</h1>
-      {loading ? <Alert message="Loading..." /> : renderUser()}
+      <h1 className="t-header">
+        <span>Click </span>
+        <Button label="Fetch" variant="success" onClick={loadUsers} data-testid="succss-btn" />
+        <span> & let Saga do the rest. </span>
+        <span>Explore <a href="https://sprakash57.github.io/create-react-saga" rel="noopener noreferrer" target="_blank">Docs</a> for more.</span>
+      </h1>
+      {isLoading ? <Alert message="Loading..." /> : renderUser()}
     </main>
   );
 };
 
-App.propTypes = {
-  state: PropTypes.object.isRequired,
-  fetchUsers: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  state: state.userReducer,
-});
-
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators({ fetchUsers }, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
