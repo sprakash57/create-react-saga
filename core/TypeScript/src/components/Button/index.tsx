@@ -10,7 +10,7 @@ type Props = {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ variant, label, ...props }: Props) => {
+const Button = ({ variant, label, ...props }: Props) => {
   return (
     <button
       className={`bttn ${variant}`}
@@ -25,3 +25,5 @@ Button.defaultProps = {
   variant: "primary",
   onClick: undefined,
 };
+
+export default Button;
