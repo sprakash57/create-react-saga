@@ -1,10 +1,12 @@
 import { all } from 'redux-saga/effects';
-import rootSaga, { watchActions } from '../sagas';
+import rootSaga from 'store/rootSaga';
+import { usersSaga } from "store/users/saga";
+
 const generator = rootSaga();
 
 describe('Test suite saga unit test', () => {
   test('should wait for all functions to complete and return', () => {
-    expect(generator.next().value).toStrictEqual(all([watchActions()]));
+    expect(generator.next().value).toStrictEqual(all([usersSaga()]));
   });
 
   test('should perform no further work', () => {

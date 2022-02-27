@@ -1,25 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators, Dispatch } from 'redux';
-import { fetchUsers } from 'actions';
-import User from 'common/User';
-import Alert from 'common/Alert';
+import { fetchUsers } from 'store/users';
 import wrs from 'assets/imgs/wrs.png';
-import { Button } from 'components/Button';
+import { Button, Alert, User } from 'components';
+import { useAppDispatch, useAppSelector } from 'hooks';
 
-type Props = {
-  state: UserState,
-  fetchUsers: () => void
-}
+const App = () => {
+  const { users, isLoading, message } = useAppSelector(state => state.usersReducer);
+  const dispatch = useAppDispatch();
 
-type State = {
-  userReducer: UserState
-}
-
-export const App = ({ state, fetchUsers }: Props) => {
-  const { users, loading, message } = state;
   const loadUsers = () => {
-    fetchUsers();
+    dispatch(fetchUsers());
   };
 
   const renderUser = () => {
@@ -35,18 +25,16 @@ export const App = ({ state, fetchUsers }: Props) => {
 
   return (
     <main className="t-center">
-      <img src={wrs} className="logo" alt="webpackLogo" />
-      <h1 className="t-header">Click <Button label="Fetch" variant="success" onClick={loadUsers} data-testid="succss-btn" /> & let Saga do the rest.</h1>
-      {loading ? <Alert message="Loading..." /> : renderUser()}
+      <img src={wrs} className="logo" alt="CRS-logo" />
+      <h1 className="t-header">
+        <span>Click </span>
+        <Button label="Fetch" variant="success" onClick={loadUsers} data-testid="succss-btn" />
+        <span> & let Saga do the rest. </span>
+        <span>Explore <a href="https://sprakash57.github.io/create-react-saga" rel="noopener noreferrer" target="_blank">Docs</a> for more.</span>
+      </h1>
+      {isLoading ? <Alert message="Loading..." /> : renderUser()}
     </main>
   );
 };
 
-const mapStateToProps = (state: State) => ({
-  state: state.userReducer,
-});
-
-const mapDispatchToProps = (dispatch: Dispatch) =>
-  bindActionCreators({ fetchUsers }, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

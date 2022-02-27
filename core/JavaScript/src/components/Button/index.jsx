@@ -5,7 +5,7 @@ import './button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ variant, label, ...props }) => {
+const Button = ({ variant, label, ...props }) => {
   return (
     <button
       className={`bttn ${variant}`}
@@ -26,3 +26,5 @@ Button.defaultProps = {
   variant: "primary",
   onClick: undefined,
 };
+
+export default Button;

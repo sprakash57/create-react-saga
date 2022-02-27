@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function User({ user }) {
+const User = ({ user }) => {
     const { name, email, address: { city, street }, phone } = user;
     return (
         <section className="user">
@@ -16,3 +16,5 @@ export default function User({ user }) {
 User.propTypes = {
     user: PropTypes.object.isRequired,
 }
+
+export default User;

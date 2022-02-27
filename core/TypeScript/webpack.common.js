@@ -42,10 +42,10 @@ module.exports = (env) => {
         resolve: {
             alias: {
                 components: path.resolve(__dirname, 'src/components'),
-                reducers: path.resolve(__dirname, 'src/reducers'),
+                hooks: path.resolve(__dirname, 'src/hooks'),
                 assets: path.resolve(__dirname, 'assets'),
-                common: path.resolve(__dirname, 'src/common'),
-                actions: path.resolve(__dirname, 'src/actions')
+                store: path.resolve(__dirname, 'src/store'),
+                utils: path.resolve(__dirname, 'src/utils')
             },
             extensions: ['.js', '.json', '.ts', '.tsx']
         },

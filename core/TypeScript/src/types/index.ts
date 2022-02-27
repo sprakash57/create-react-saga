@@ -7,18 +7,4 @@ interface User {
         street: string
     },
     phone: string;
-    username?: string;
-    website?: string;
-    compnay?: string;
-}
-
-interface UserState {
-    users: User[];
-    loading: boolean;
-    message: string;
-}
-
-interface UserAction {
-    type: string;
-    data: User[] | string;
 }

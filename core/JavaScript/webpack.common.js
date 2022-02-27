@@ -40,11 +40,7 @@ module.exports = (env) => {
             ]
         },
         resolve: {
-            extensions: ['.js', '.jsx'],
-            alias: {
-                components: path.resolve(__dirname, 'src/components/'),
-                common: path.resolve(__dirname, 'src/common')
-            }
+            extensions: ['.js', '.jsx']
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
