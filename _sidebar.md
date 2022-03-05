@@ -6,4 +6,5 @@
 * [API integration](api.md)
 * [Recipes](recipes.md)
 * [Deployment](deployment.md)
+* [Changelog](changelog.md)
 * [Support](support.md)
