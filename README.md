@@ -7,8 +7,9 @@
 <h1 align="center">Create React Saga</h1>
 
 [![NPM](https://img.shields.io/npm/v/create-react-saga.svg)](https://www.npmjs.com/package/create-react-saga)
-[![NPM](https://img.shields.io/npms-io/maintenance-score/create-react-saga)](https://github.com/sprakash57/create-react-saga/releases)
 [![Downloads](https://img.shields.io/npm/dt/create-react-saga)](https://www.npmjs.com/package/create-react-saga)
+[![MadeWithReactJs.com shield](https://madewithreactjs.com/storage/repo-shields/2824-shield.svg)](https://madewithreactjs.com/p/create-react-saga/shield-link)
+
 
 `create-react-saga` is a CLI tool for quickly setup your next clutter-free webpack backed React application. It provides you the latest hooks based codebase, testing utilities and storybooks. So if you are thinking of below -
 1. Create components ahead of development for early reviews.
