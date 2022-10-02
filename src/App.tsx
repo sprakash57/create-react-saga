@@ -35,7 +35,7 @@ const App = () => {
       </nav>
       <img src={wrs} className="main__logo" alt="create-react-saga" />
       <section>
-        <Button label="Click to run Saga" variant="primary" onClick={() => dispatch(fetchUsers())} data-testid="succss-btn" />
+        <Button label="Click to run Saga" variant="success" onClick={() => dispatch(fetchUsers())} data-testid="succss-btn" />
       </section>
       {renderUser()}
     </main>
