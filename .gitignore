@@ -23,3 +23,6 @@ nala
 # editor
 .vscode
 .idea
+
+# coverage
+coverage
