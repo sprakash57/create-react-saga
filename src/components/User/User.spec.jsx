@@ -8,7 +8,8 @@ describe("User", () => {
         phone: ''
     }
     test("Should render user card on the screen", () => {
-        const { getByText } = render(<User user={mockUser} />);
+        const { getByText, asFragment } = render(<User user={mockUser} />);
         expect(getByText('Name: john doe')).toBeInTheDocument();
+        expect(asFragment()).toMatchSnapshot();
     });
 })
