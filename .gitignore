@@ -26,3 +26,6 @@ nala
 
 # coverage
 coverage
+
+#snaphost tests
+__snapshots__

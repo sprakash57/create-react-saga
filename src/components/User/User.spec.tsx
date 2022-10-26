@@ -13,6 +13,6 @@ describe("User", () => {
   test("Should render user card on the screen", () => {
     const { getByText, asFragment } = render(<User user={mockUser} />);
     expect(getByText("Name: john doe")).toBeInTheDocument();
-    expect(asFragment()).toMatchInlineSnapshot(`<p>Name: {name}</p>`);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
