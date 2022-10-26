@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from './store/users';
-import wrs from '../assets/wrs.png';
+import wrs from '../assets/images/wrs.png';
 import { Button, User } from './components';
 import appInfo from '../package.json';
 
