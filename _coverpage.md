@@ -7,7 +7,7 @@
 
 > A CLI tool to bootstrap modern React application.
 
-- React 17 and Webpack 5
+- React **18** and Webpack 5
 - Redux-Saga with @reduxjs/toolkit
 - Storybook.js
 

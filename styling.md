@@ -15,6 +15,8 @@ rules: [
 
 If you are building your app and want your assets present in your `dist` folder. You can do so by replacing `name` query into file-loader path `file-loader?name=/assets/fonts/[name].[ext]`
 
+> To know more in-depth about _Asset Management_ and how to set rules for them check this <a href="https://webpack.js.org/guides/asset-management/" target="_blank">article</a>.
+
 ## Styling your app
 
 It is as simple as adding stylesheets for your components or add a single global `.css`. Choice is yours. Below is and example how we generally import `css` files and use it inside components.

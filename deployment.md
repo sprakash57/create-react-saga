@@ -4,7 +4,7 @@ AWS Amplify enables web developers to build and deploy React application quickly
 
 ![Create React Saga](./assets/home.png)
 
-## Build Settings
+### Build Settings
 
 You don't need to do much on AWS Amplify after you connect your branch. However, you might want to check your amplify.yml file, while you deploy your application for the first time. It should look like this.
 
@@ -28,4 +28,10 @@ frontend:
       - node_modules/**/*
 ```
 
-> More platforms and how tos will be added soon for deployment.
+## Netlify
+
+Create React Saga's boilerplate is optimized for netlify and you don't have to do any manual build settings to deploy it properly. Just tag the right repository to it and netlify will do the rest. You can find the live demo of the running boilerplate over <a href="https://create-react-saga.netlify.app/" target="_blank">here</a>.
+
+## Vercel
+
+Vercel is also compatible with Create React Saga. You can easily deploy it on their platform as well.

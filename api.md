@@ -1,6 +1,6 @@
 ## Fetch Data
 
-If you are going to leverage Redux-Saga for your asynchronous calls, you should check out `fetchData.js`. Create-React-Saga uses it at the core for all external API calls. Of course this is built upon Browser's `fetch API`.
+Create React Saga leverages `@reduxjs/toolkit` to create a abstraction layer for API calls. For example, the starter code is using Browser's `fetch` api for this purpose. But you can easily replace it with Axios. `@reduxjs/toolkit` also provides useful hooks to avoid hefty setup code for async actions.
 
 ## Redux-Saga
 

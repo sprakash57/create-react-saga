@@ -30,14 +30,12 @@ This is where you tell Storybook to find your stories and what add-ons you want 
 
 ```
 module.exports = {
-  "stories": [
-    "../src/components/**/*.stories.mdx",
-    "../src/components/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  "addons": [
-    "@storybook/addon-essentials"
-  ]
-}
+  "stories": ["../src/components/**/*.stories.mdx", "../src/components/**/*.stories.@(ts|tsx)"],
+  "addons": ["@storybook/addon-essentials"],
+  core: {
+    builder: "webpack5"
+  }
+};
 ```
 
 2. `components`
