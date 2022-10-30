@@ -1,20 +1,41 @@
 .bttn {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: monospace;
   font-weight: 700;
   border: none;
   outline: none;
-  border-radius: 0.8rem;
   color: white;
   cursor: pointer;
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
 }
-.primary {background-color: #1ea7fd;}
-.secondary {background-color: #6c757d;}
-.success {background-color: #0ed145;}
-.danger {background-color: tomato;}
-.warning {background-color: #ffc107; color: #212529;}
-.link {background-color: transparent; color: #007bff;}
+
+.primary {
+  background-color: #1ea7fd;
+}
+
+.secondary {
+  background-color: #6c757d;
+}
+
+.success {
+  background-color: #0ed145;
+}
+
+.danger {
+  background-color: tomato;
+}
+
+.warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.link {
+  background-color: transparent;
+  color: #007bff;
+}

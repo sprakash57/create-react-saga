@@ -35,7 +35,7 @@ module.exports = (env) => {
             rules: [
                 { test: /\.(js|ts)x?$/, use: 'babel-loader', exclude: /node_modules/ },
                 { test: /\.(css)$/, use: ['style-loader', 'css-loader'] },
-                { test: /\.(png|jpe?g|gif|svg|ico)$/, use: [{ loader: 'file-loader?name=assets/imgs/[name].[ext]' }] },
+                { test: /\.(png|jpe?g|gif|svg|ico)$/, use: [{ loader: 'file-loader?name=assets/images/[name].[ext]' }] },
                 { test: /\.(eot|ttf|wof|wof2)$/, use: [{ loader: 'file-loader?name=/assets/fonts/[name].[ext]' }] }
             ]
         },

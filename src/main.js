@@ -55,7 +55,7 @@ export const createProject = async (options) => {
         },
         {
             title: 'Installing dependencies. It will take few minutes. Please do not cancel the installation.',
-            task: () => projectInstall({ cwd: newOptions.target, verbose: true })
+            task: async () => await projectInstall({ cwd: newOptions.target, verbose: true })
         },
     ]);
 

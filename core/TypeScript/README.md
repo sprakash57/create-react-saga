@@ -1,5 +1,5 @@
-## Create React Saga
-This repository is bootstrapped with <a href="https://github.com/sprakash57/create-react-saga" target="_blank">Create React Saga</a>.
+## TS-template for create-react-saga
+This repository is bootstrapped with <a href="https://github.com/sprakash57/create-react-saga" target="_blank" rel="noopener noreferrer">Create React Saga</a>.
 
 ## Scripts provided
 
@@ -14,7 +14,7 @@ Application will hot reload if you make any changes.
 
 ### `npm test`
 
-Runs all the test cases. Behind the scene create-react-saga uses <a href="https://jestjs.io" target="_blank">Jest</a> and <a href="https://testing-library.com/docs/react-testing-library/intro" target="_blank">React Testing Library</a>.
+Runs all the test cases. Behind the scene create-react-saga uses <a href="https://jestjs.io" target="_blank" rel="noopener noreferrer">Jest</a> and <a href="https://testing-library.com/docs/react-testing-library/intro" target="_blank">React Testing Library</a>.
 
 ### `npm build`
 
@@ -23,9 +23,9 @@ It bundles the app in production mode and optimizes the build for the best perfo
 
 ### `npm run storybook`
 
-<a href="https://storybook.js.org" target="_blank">Storybook</a> is the core of the starter kit. \
+<a href="https://storybook.js.org" target="_blank" rel="noopener noreferrer">Storybook</a> is the core of the starter kit. \
 You can view the stories in the browser at http://localhost:6006 after running storybook.
 
 ## Learn More
 
-Want to learn more?! See the full <a href="http://sprakash57.github.io/create-react-saga" target="_blank">Documentation</a> in action.
+Want to learn more?! See the full <a href="http://sprakash57.github.io/create-react-saga" target="_blank" rel="noopener noreferrer">Documentation</a> in action.

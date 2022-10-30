@@ -1,7 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
+import { all } from "redux-saga/effects";
 import usersReducer from "./users";
-import rootSaga from "./rootSaga";
+import { usersSaga } from "./users/saga";
+
+function* rootSaga() {
+    yield all([usersSaga()]);
+}
 
 const sagaMiddleware = createSagaMiddleware();
 
